@@ -1,9 +1,0 @@
-// 解决 es7 出现报错
-{
-  "compilerOptions": {
-    "experimentalDecorators": true,
-    "target": "es2017"
-  },
-  "exclude": ["node_modules", "dist"],
-  "include": ["src", "env", "static"]
-}
