@@ -1,14 +1,14 @@
 import React,{Component} from 'react';
 
-class List extends Component{
+class Cart extends Component{
     render(){
 
         return (
             <div>
-                分类
+                购物车
             </div>
         )
     }
 }
 
-export default List;
+export default Cart;
