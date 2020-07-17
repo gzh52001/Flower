@@ -5,7 +5,7 @@ class Home extends Component {
 
         return (
             <div>
-
+                123
             </div>
         )
     }
