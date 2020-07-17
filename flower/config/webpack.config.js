@@ -1,6 +1,5 @@
 'use strict';
 
-const px2rem = require('postcss-px2rem');
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
@@ -104,7 +103,6 @@ module.exports = function(webpackEnv) {
             // Adds PostCSS Normalize as the reset css with default options,
             // so that it honors browserslist config in package.json
             // which in turn let's users customize the target behavior as per their needs.
-            px2rem({ remUnit: 37.5 }),  //  1rem = 37.5px 这个是根据375px设计稿来的
             postcssNormalize(),
           ],
           sourceMap: isEnvProduction && shouldUseSourceMap,
