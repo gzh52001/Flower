@@ -55,7 +55,7 @@ body {
             margin-bottom: 1rem;
         }
 
-        .login {
+        .loginandreg {
             display: block;
             width: 8rem;
             height: 2.47142857rem;
@@ -78,6 +78,7 @@ body {
     margin: 0;
     border-radius: 0.28571429rem;
     box-shadow: 0 0.28571429rem 0.42857143rem 0 #DEE2E5;
+    box-sizing: border-box;
     position: absolute;
     width: 95%;
     top: 11rem;

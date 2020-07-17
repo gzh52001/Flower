@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Foot from '../../component/footer/'
 import './mine.scss'
 import {
     LeftOutlined, RightOutlined, AccountBookOutlined,
@@ -78,6 +79,10 @@ class Mine extends Component {
         ]
     }
 
+    gologin = () => {
+        this.props.history.push('/login')
+        // console.log(11)
+    }
     render() {
         const { orderlist, myinfolist, setlist } = this.state
         return (
@@ -93,7 +98,7 @@ class Mine extends Component {
                     <div className="info">
                         <p>Hi,欢迎来到花礼网</p>
                         <p>
-                            <a className="login">登陆/注册</a>
+                            <a onClick={this.gologin} className="loginandreg">登陆/注册</a>
                         </p>
                     </div>
                 </div>
@@ -141,7 +146,7 @@ class Mine extends Component {
                         )
                     })}
                 </div>
-
+                <Foot props={this.props} />
             </div>
         )
     }
