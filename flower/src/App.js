@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom'
+import './base/base.css'
+import Mine from './pages/Mine/index'
 import Home from './pages/Home/index'
 import List from './pages/List/index'
 import Cart from './pages/Cart/index'
@@ -12,12 +14,12 @@ function App() {
       path: '/home'
     },
     {
-      text:'分类',
-      path:'/list'
+      text: '分类',
+      path: '/list'
     },
     {
-      text:'购物车',
-      path:'/cart'
+      text: '购物车',
+      path: '/cart'
     },
     {
       text: '我的',
