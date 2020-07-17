@@ -7,8 +7,9 @@
     color: #fff;
 
     .headerbar-left {
+        padding-left: 1rem;
         width: 3.42857143rem;
-        height: 3.42857143rem;
+        // height: 3.42857143rem;
         line-height: 3.42857143rem;
         -webkit-box-sizing: content-box;
         box-sizing: content-box;
@@ -22,15 +23,22 @@
     }
 
     .headerbar-logo {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
+        margin-top: 1rem;
         text-align: center;
 
         img {
             width: 10.71428571rem;
             vertical-align: middle;
         }
+    }
+
+    .headerbar-right {
+        width: 3.42857143rem;
+        height: 3.42857143rem;
+        line-height: 3.42857143rem;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        padding-right: 1rem;
+        text-align: right;
     }
 }
