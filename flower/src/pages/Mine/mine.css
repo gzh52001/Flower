@@ -3,6 +3,8 @@ body {
   background: #E9ECF0;
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -68,12 +70,13 @@ body {
 
 .myorder {
   background: #fff;
-  margin: 0 0.57142857rem;
+  margin: 0;
   border-radius: 0.28571429rem;
   box-shadow: 0 0.28571429rem 0.42857143rem 0 #DEE2E5;
   position: absolute;
   width: 95%;
   top: 11rem;
+  left: 0.5rem;
 }
 
 .myorder .mohead {
@@ -81,7 +84,7 @@ body {
   width: 93%;
   height: 3.14285714rem;
   line-height: 3.14285714rem;
-  padding: 0 1.14285714rem 0rem;
+  padding: 0 1rem 0rem;
   overflow: hidden;
   position: relative;
 }
