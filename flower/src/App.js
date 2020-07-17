@@ -5,7 +5,6 @@ import Mine from './pages/Mine/index'
 import Home from './pages/Home/index'
 import List from './pages/List/index'
 import Cart from './pages/Cart/index'
-import Mine from './pages/Mine/index'
 
 function App() {
   const menu = [
