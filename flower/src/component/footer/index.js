@@ -24,9 +24,7 @@ function foot(props) {
     }];
 
     const goto = (path) => {
-        // console.log(props)
         props.props.history.push(path);
-        // console.log(props)
     }
     return (
         <ul className="foot">

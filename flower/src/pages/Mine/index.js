@@ -8,6 +8,14 @@ import {
     BellOutlined, StarOutlined, ExclamationCircleOutlined, SettingOutlined
 } from '@ant-design/icons'
 
+document.addEventListener(
+
+    'touchmove',
+    function (event) {
+        event.preventDefault()
+    },
+    { passive: false }
+)
 class Mine extends Component {
     state = {
         orderlist: [
@@ -86,7 +94,7 @@ class Mine extends Component {
     render() {
         const { orderlist, myinfolist, setlist } = this.state
         return (
-            <div>
+            <div className="mine">
                 <div className="header">
                     <div className="hleft">
                         <LeftOutlined />

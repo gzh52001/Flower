@@ -1,25 +1,76 @@
 import React, { Component } from 'react';
+import { Route, Redirect, Switch, withRouter } from 'react-router-dom'
 import './login.scss'
-import { LeftOutlined, MenuOutlined, QqOutlined, WechatOutlined, MailOutlined } from '@ant-design/icons'
+import { LeftOutlined, MenuOutlined, QqOutlined, WechatOutlined, MailOutlined, HomeOutlined, UnorderedListOutlined, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons'
+
 class Login extends Component {
     state = {
-        userlogin: false
+        userlogin: false,
+        navlist: [
+            {
+                text: '首页',
+                path: '/',
+                icon: <HomeOutlined />
+            },
+            {
+                text: '分类搜索',
+                path: '/list',
+                icon: <UnorderedListOutlined />
+            },
+            {
+                text: '购物车',
+                path: '/cart',
+                icon: <ShoppingCartOutlined />
+            },
+            {
+                text: '我的',
+                path: '/mine',
+                icon: <UserOutlined />
+            },
+        ],
+        navtrue: false
     }
     tabway = () => {
         this.setState({
             userlogin: !this.state.userlogin
         })
     }
+    goreg = () => {
+        this.props.history.push('/reg', { props: this.props })
+    }
+    gopath = (path) => {
+        this.props.history.push(path)
+        // console.log(path)
+    }
+    navok = () => {
+        this.setState({
+            navtrue: !this.state.navtrue
+        })
+    }
     render() {
-
+        const { path } = this.props.match
+        const { history } = this.props
+        const { navlist, navtrue } = this.state
         return (
             <div>
                 <div className="header">
-                    <div className="hleft">
-                        <LeftOutlined />
+                    <div className="hleft" >
+                        <LeftOutlined onClick={function goback() { history.goBack() }} />
                     </div>
                     <div className="hcenter">登陆注册</div>
-                    <div className="hright"><MenuOutlined className="hrmenu" /></div>
+                    <div className="hright"><MenuOutlined className="hrmenu" onClick={this.navok} /></div>
+
+                    <ul className={navtrue ? "navlist" : "navlist top100"}>
+                        {navlist.map(item => {
+                            return (
+                                <li key={item.path} onClick={this.gopath.bind(this, item.path)}>
+                                    <i>{item.icon}</i>
+                                    <p>{item.text}</p>
+                                </li>
+                            )
+                        })}
+                    </ul>
+
 
                 </div>
                 <div className="lglogo">
@@ -67,7 +118,7 @@ class Login extends Component {
                                 <i><WechatOutlined className="qcicon" /></i>
                                 <span>微信</span>
                             </div>
-                            <div className="qclgitem">
+                            <div className="qclgitem" onClick={this.goreg}>
                                 <i><MailOutlined className="qcicon" /></i>
                                 <span>邮箱注册</span>
                             </div>
@@ -79,4 +130,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default withRouter(Login);

@@ -5,32 +5,15 @@ import './base/foot.scss'
 import Mine from './pages/Mine/index'
 import Login from './pages/Login/'
 import Home from './pages/Home/index'
+import Reg from './pages/Login/reg'
 
 function App(props) {
-  console.log(props)
-  const menu = [
-    {
-      text: '我的',
-      path: '/mine'
-    },
-    {
-      text: '首页',
-      path: '/home'
-    },
-    {
-      text: '登陆',
-      path: '/login'
-    },
-  ];
-
-  // const goto = (path) => {
-  //   props.history.push(path);
-  // }
   return (
     <div >
       <Switch>
         <Route path='/mine' component={Mine} props={props} />
         <Route path='/login' component={Login} />
+        <Route path='/reg' component={Reg} />
         <Route path='/home' component={Home} />
         <Redirect from='/' to='/home' exact />
       </Switch>

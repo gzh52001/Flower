@@ -1,10 +1,16 @@
 html,
 body {
-  background: #E9ECF0;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  touch-action: none;
+}
+
+.mine {
+  background: #E9ECF0;
+  padding-bottom: 5rem;
 }
 
 .header {

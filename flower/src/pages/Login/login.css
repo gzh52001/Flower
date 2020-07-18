@@ -32,6 +32,38 @@
   margin-top: 0.8rem;
 }
 
+.header .navlist {
+  position: absolute;
+  top: 6%;
+  right: 0.57142857rem;
+  z-index: 9;
+  background: #fff;
+  border: 1px solid #E9ECF0;
+  border-radius: 0.28571429rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header .navlist li {
+  flex: 1;
+}
+
+.header .navlist li i {
+  float: left;
+  margin-left: 1rem;
+}
+
+.header .navlist li p {
+  float: left;
+  padding: 0 1rem 0 0.6rem;
+  font-size: 14px;
+  color: #232628;
+}
+
+.header .top100 {
+  top: 100% !important;
+}
+
 .lglogo {
   text-align: center;
   background-color: #fff;
@@ -69,7 +101,7 @@
 .login .ckcode .getcode {
   position: absolute;
   right: 0;
-  top: 40%;
+  top: 38%;
   padding: 0.28571429rem 0.57142857rem;
   color: #71797f;
   font-size: 0.92857143rem;
@@ -96,10 +128,12 @@
 }
 
 .login .tablgway {
+  margin: auto;
   margin-top: 2.14285714rem;
   color: #71797f;
   font-size: 1.21428571rem;
   text-align: center;
+  width: 40%;
 }
 
 .login .quicklg {
@@ -137,4 +171,26 @@
 .login .quicklg .qclg .qclgitem span {
   margin-left: 0.57142857rem;
   font-size: 0.92857143rem;
+}
+
+.errtip {
+  background-color: #424242;
+  color: #ff734c;
+  border-radius: 10px;
+  margin: auto;
+  width: 70%;
+  height: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.ant-alert-message {
+  color: white;
+}
+
+.ant-alert-icon {
+  display: none;
 }

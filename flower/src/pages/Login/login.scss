@@ -31,6 +31,38 @@
         }
 
     }
+
+    .navlist {
+        position: absolute;
+        top: 6%;
+        right: 0.57142857rem;
+        z-index: 9;
+        background: #fff;
+        border: 1px solid #E9ECF0;
+        border-radius: 0.28571429rem;
+        display: flex;
+        flex-direction: column;
+
+        li {
+            flex: 1;
+
+            i {
+                float: left;
+                margin-left: 1rem;
+            }
+
+            p {
+                float: left;
+                padding: 0 1rem 0 0.6rem;
+                font-size: 14px;
+                color: #232628;
+            }
+        }
+    }
+
+    .top100 {
+        top: 100% !important;
+    }
 }
 
 .lglogo {
@@ -69,7 +101,7 @@
         .getcode {
             position: absolute;
             right: 0;
-            top: 40%;
+            top: 38%;
             padding: 0.28571429rem 0.57142857rem;
             color: #71797f;
             font-size: 0.92857143rem;
@@ -97,10 +129,13 @@
     }
 
     .tablgway {
+        margin: auto;
         margin-top: 2.14285714rem;
         color: #71797f;
         font-size: 1.21428571rem;
         text-align: center;
+        width: 40%;
+
     }
 
     .quicklg {
@@ -139,4 +174,27 @@
             }
         }
     }
+}
+
+.errtip {
+    background-color: rgb(66, 66, 66);
+    color: #ff734c;
+    border-radius: 10px;
+    margin: auto;
+    width: 70%;
+    height: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.ant-alert-message {
+
+    color: white;
+}
+
+.ant-alert-icon {
+    display: none;
 }
