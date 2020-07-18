@@ -1,3 +1,7 @@
+.navigation {
+    display: block;
+}
+
 .headerbar {
     display: -webkit-box;
     display: -webkit-flex;
@@ -26,10 +30,10 @@
     }
 
     .iconfont {
-        font-family: "iconfont" !important;
+        font-family: 'iconfont' !important;
         font-size: 1.71428571rem;
         font-style: normal;
-        color: #fff
+        color: #fff;
     }
 
     .headerbar-logo {
@@ -72,8 +76,8 @@
     height: 2.57142857rem;
     overflow: hidden;
     background: #fff;
-    color:black;
-    
+    color: black;
+
     .conpany-info-item {
         width: 5rem;
         height: 2.57142857rem;
@@ -81,16 +85,206 @@
         text-align: center;
         font-size: 0.78571429rem;
 
-        .conpany-info-item:before {
-            content: "\e666";
-            font-family: "iconfont" !important;
-            font-size: 1rem;
-            font-style: normal;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            color: #435448;
-            margin-right: 2px;
-            vertical-align: bottom;
+    }
+
+    .conpany-info-item:before {
+        content: '\e666';
+        font-family: 'iconfont' !important;
+        font-size: 1rem;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #435448;
+        margin-right: 2px;
+        vertical-align: bottom;
+    }
+}
+
+.procate {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background: #fff;
+    padding: 0.57142857rem 0;
+
+    .procate-item {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        text-align: center;
+        font-size: 0.85714286rem;
+
+        img {
+            width: 2.57142857rem;
         }
+    }
+}
+
+.scene {
+    background: #fff;
+    padding-bottom: 1.14285714rem;
+
+    .modetitle {
+        display: flex;
+        align-items: center;
+        padding: 0.85714286rem;
+        line-height: 1em;
+        background: #fff;
+        font-size: 1.14285714rem;
+    }
+
+    .modetitle:before {
+        content: '';
+        display: inline-block;
+        width: 0.21428571rem;
+        height: 1em;
+        background: #435448;
+        margin-right: 0.42857143rem;
+    }
+
+    .scene-list {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 0 6px;
+
+        .scene-item {
+            display: block;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            position: relative;
+            margin: 0 0.14285714rem;
+            overflow: hidden;
+        }
+
+        .scene-item.scene-item-radius {
+            border-radius: 0.28571429rem;
+
+            img {
+                width: 100%;
+                vertical-align: middle;
+            }
+
+            .scene-item-use-title {
+                position: absolute;
+                bottom: 0.28571429rem;
+                left: 0;
+                right: 0;
+                z-index: 9999;
+                color: #fff;
+                text-align: center;
+            }
+
+
+        }
+
+    }
+
+    .scene-list {
+        margin-top: 0.57142857rem;
+
+        .scene-item.scene-item-radius {
+            border-radius: 0.28571429rem;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .scene-item-title {
+            position: absolute;
+            top: 0.4rem;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            text-align: center;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+    }
+
+    .scene-list {
+        margin-top: 0.57142857rem;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 0 6px;
+
+        .scene-item.scene-item-bg {
+            margin: 0;
+            height: 9.57142857rem;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            padding: 0.85714286rem;
+            border: 1px solid #E9ECF0;
+            background-image: url(../../img/m_home_ranklist2.png);
+
+            .scene-item-desc {
+                font-size: 0.78571429rem;
+                color: #71797F;
+            }
+
+            .scene-item-bottom {
+                position: absolute;
+                bottom: 0.85714286rem;
+                left: 0.85714286rem;
+                z-index: 1;
+                font-size: 0.71428571rem;
+                overflow: hidden;
+                -o-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 10px;
+
+                .scene-item-bottom-label {
+                    display: -webkit-inline-box;
+                    display: -webkit-inline-flex;
+                    display: -ms-inline-flexbox;
+                    display: inline-flex;
+                    -webkit-box-align: center;
+                    -webkit-align-items: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -webkit-box-pack: center;
+                    -webkit-justify-content: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    border-radius: 2rem;
+                    background: #FF734C;
+                    padding: 0.07142857rem 0.42857143rem;
+                    color: #fff;
+                    margin-right: 2.14285714rem;
+                }
+
+                .scene-item-bottom-text s {
+                    color: #B4BABF;
+                }
+            }
+        }
+        .scene-item.scene-item-bg {
+            background-image: url(../../img/m_home_special2.png);
+        }
+    }
+    .scene-item-pange {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(35, 38, 40, 0.8);
+        color: #fff;
+        text-align: center;
+        font-size: 0.85714286rem;
+        padding: 0.28571429rem 0;
     }
 }

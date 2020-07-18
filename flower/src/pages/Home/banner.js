@@ -1,12 +1,15 @@
 import { Carousel, Button, WhiteSpace, WingBlank } from 'antd-mobile';
 import React, { Component } from 'react'
 class Banner extends Component {
+  
   state = {
-    data: ['1', '2', '3'],
+    data: [],
     imgHeight: 176,
     slideIndex: 2,
   }
+  
   componentDidMount() {
+    
     // simulate img loading
     setTimeout(() => {
       this.setState({
@@ -28,20 +31,20 @@ class Banner extends Component {
               data: this.state.data.concat('AiyWuByWklrrUDlFignR'),
             });
           }}
-        ></Button>
+          ></Button>
         <WhiteSpace />
         <Carousel
           autoplay={true}
           infinite
           selectedIndex={this.state.slideIndex}
-        //   beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-        //   afterChange={index => console.log('slide to', index)}
+          // beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
+          // afterChange={index => console.log('slide to', index)}
         
         >
           {this.state.data.map((val, index) => (
             <a
               key={val + index}
-              href="http://www.alipay.com"
+              href=""
               style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight }}
             >
               {/* https://img02.hua.com/slider/20_graduation_m.jpg */}
