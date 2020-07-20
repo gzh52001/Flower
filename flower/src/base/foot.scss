@@ -1,0 +1,27 @@
+.foot {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+
+    li {
+        flex: 1;
+        width: 25%;
+        padding: 0.3rem 0rem;
+
+        p {
+            font-size: 0.78571429rem;
+        }
+
+        i {
+            font-size: 1.3rem;
+        }
+    }
+}

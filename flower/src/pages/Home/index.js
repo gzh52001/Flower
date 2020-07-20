@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import { Carousel } from 'antd'
 import Foot from '../../component/footer/index'
 import Banner from './banner'
-// import http, { request } from '../../../utils/http'
+import http, { require } from '../../utils/http'
 import {
   BarsOutlined,
   CustomerServiceOutlined,
@@ -11,29 +11,23 @@ import {
 import './home.scss'
 
 class Home extends Component {
-  //   async componentDidMount(){
-  //     // 获取商品id
-  //     const {match} = this.props;
-  //     const {id} = match.params;
+  async componentDidMount() {
+    
+    const datas = fetch('http://10.3.141.34:3000/home').then((res) =>
+      res.json(),
+    )
+    // const datas = await http.get('/home')
+    // console.log('datas=', datas)
 
-  //     // /mobile/index.php?act=goods&op=goods_detail&goods_id=227330&key=
-  //     const {datas} = await http.get('/mobile/index.php',{
-  //         act:'goods',
-  //         op:'goods_detail',
-  //         goods_id:id,
-  //     });
-
-  //     console.log('datas=',datas)
-
-  //     this.setState({
-  //         data:{
-  //             ...datas.goods_info,
-  //             goods_image:datas.goods_image,
-  //         }
-  //     })
-  // }
+    console.log(datas)
+    // this.setState({
+    //   datas: datas,
+    // })
+  }
 
   state = {
+    // datas: [],
+
     nav_list: [
       {
         href: '',

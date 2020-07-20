@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Redirect, Switch } from 'react-router-dom'
 import './base/base.css'
+import './base/foot.scss'
 import Mine from './pages/Mine/index'
 import Home from './pages/Home/index'
 import List from './pages/List/index'
