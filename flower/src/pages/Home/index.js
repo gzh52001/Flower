@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import { Carousel } from 'antd'
-import 
+import Foot from '../../component/footer/index'
 import Banner from './banner'
 // import http, { request } from '../../../utils/http'
 import {
@@ -133,7 +133,7 @@ class Home extends Component {
   render() {
     const { nav_list, scene_list, scene_list2, more_2 } = this.state
     return (
-      <div>
+      <div className="home">
         {/* {<!--HeaderBar-->} */}
         <div className="headerbar">
           <div className="headerbar-left">
@@ -945,6 +945,7 @@ class Home extends Component {
             </a>
           </div>
         </section>
+        <Foot props={this.props} />
       </div>
     )
   }
