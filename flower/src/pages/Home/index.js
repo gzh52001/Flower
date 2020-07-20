@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 // import { Carousel } from 'antd'
+import 
 import Banner from './banner'
 // import http, { request } from '../../../utils/http'
 import {
