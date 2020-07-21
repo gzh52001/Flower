@@ -6,6 +6,7 @@ import Mine from './pages/Mine/index'
 import Login from './pages/Login/'
 import Home from './pages/Home/index'
 import Reg from './pages/Login/reg'
+import List from './pages/List/index'
 
 function App(props) {
   return (
@@ -15,6 +16,7 @@ function App(props) {
         <Route path='/login' component={Login} />
         <Route path='/reg' component={Reg} />
         <Route path='/home' component={Home} />
+        <Route path='/list' component={List} />
         <Redirect from='/' to='/home' exact />
       </Switch>
     </div>

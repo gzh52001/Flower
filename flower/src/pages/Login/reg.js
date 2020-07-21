@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { LeftOutlined, MenuOutlined } from '@ant-design/icons'
 import { Alert } from 'antd';
-import http, { request } from '../../utils/http'
+import Myhead from '../Mine/myhead'
+import http from '../../utils/http'
+import axios from 'axios'
 
 let timer1 = undefined;
 let timer2 = undefined;
@@ -21,7 +22,7 @@ class reg extends Component {
         }
         this.submitreg = this.submitreg.bind(this)
     }
-    handleEmail(e) {//em正则
+    async handleEmail(e) {//em正则
         let value = e.target.value;
         if (!(/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(value))) {
             this.setState({
@@ -30,9 +31,17 @@ class reg extends Component {
             })
             this.timerStart1()
         } else {
-            this.setState({
-                emailok: true
-            })
+            const datas = await http.get('/user/verify', {
+                username: this.state.username
+            });
+            if (datas.meta.status === 200) {
+                this.setState({
+                    emailok: true
+                })
+            } else {
+                alert('用户名已被注册')
+            }
+
         }
     }
     handlepsw(e) {//psw正则
@@ -111,12 +120,30 @@ class reg extends Component {
     //提交注册
     async submitreg() {
         const { emailok, psw2ok, pswok } = this.state;
+        const { username, psw } = this.state
         if (emailok && psw2ok && pswok) {
-            const datas = await http.post('/user/login', {
-                username: this.state.username,
-                password: this.state.psw,
-            });
-            console.log(datas)
+            axios({
+                url: 'http://10.3.141.34:3000/user/register',
+                method: 'post',
+                data: { username, password: psw },
+                // headers: {
+                //     'Content-Type': 'application/x-www-form-urlencoded'
+                // }
+            })
+                .then(response => {
+                    if (response.data.meta.status === 200) {
+                        localStorage.setItem('floweruser', username)
+                        this.props.history.push('/mine')
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            // if (datas.flag) {
+            //     localStorage.setItem('floweruser', this.state.username)
+            // }
+        } else {
+            alert('请输入正确的邮箱和密码格式')
         }
         // console.log(emailok, psw2ok, pswok)
     }
@@ -138,16 +165,7 @@ class reg extends Component {
         const { emailerr, pswerr, psw2, psw, username } = this.state
         return (
             <div >
-                <div className="header">
-                    <div className="hleft">
-                        <LeftOutlined onClick={function goback() {
-                            history.goBack()
-                        }} />
-                    </div>
-                    <div className="hcenter" >邮箱注册</div>
-                    <div className="hright"><MenuOutlined className="hrmenu" /></div>
-
-                </div>
+                <Myhead />
                 <div className="reginfo login">
                     <div className="username">
                         <p>邮箱</p>
@@ -160,7 +178,7 @@ class reg extends Component {
                     <button className="loginbtn" onClick={this.submitreg}>注册邮箱账号</button>
                     <div onClick={function goback() {
                         history.goBack()
-                    }} className="tablgway">返回登陆</div>
+                    }} className="tablgway tbw">返回登陆</div>
                 </div>
                 {
                     emailerr ?

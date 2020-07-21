@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Redirect, Switch } from 'react-router-dom'
+// import { Route, Redirect, Switch } from 'react-router-dom'
 import { HomeOutlined, UnorderedListOutlined, ShoppingCartOutlined, SmileOutlined } from '@ant-design/icons'
 
 
@@ -19,12 +19,13 @@ function foot(props) {
     },
     {
         text: '我的',
-        path: '/mine',
+        path: '/mine/mine',
         icon: <SmileOutlined />
     }];
 
     const goto = (path) => {
         props.props.history.push(path);
+        // console.log(props.props)
     }
     return (
         <ul className="foot">

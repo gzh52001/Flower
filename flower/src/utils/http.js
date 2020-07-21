@@ -2,7 +2,7 @@
  * 封装ajax请求
  * fetch(url,options)
  */
-let baseUrl = process.env.NODE_ENV === 'development' ? 'http://mock.qfh5.cn/mock/5ef07a648aa2243c602a5ff6' : 'http://mock.qfh5.cn/mock/5ef07a648aa2243c602a5ff6'
+let baseUrl = process.env.NODE_ENV === 'development' ? 'http://10.3.141.34:3000' : 'http://10.3.141.34:3000'
 
 export async function request(url, data = {}, options = {}) {
     if (options.baseUrl) {

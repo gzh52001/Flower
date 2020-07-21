@@ -5,12 +5,14 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden !important;
   touch-action: none;
+  background: #E9ECF0;
 }
 
 .mine {
   background: #E9ECF0;
-  padding-bottom: 5rem;
+  box-sizing: border-box;
 }
 
 .header {
@@ -78,14 +80,55 @@ body {
   color: white;
 }
 
+.userinfo .info .userpic {
+  float: left;
+  width: 4.57142857rem;
+  height: 4.57142857rem;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  margin-right: 1.42857143rem;
+}
+
+.userinfo .info .userpic a {
+  height: 100%;
+}
+
+.userinfo .info .userpic a img {
+  height: 100%;
+  vertical-align: top;
+}
+
+.userinfo .info .lginfo {
+  float: left;
+  color: #fff;
+  max-width: 8.57142857rem;
+}
+
+.userinfo .info .lginfo p {
+  margin-top: 1rem;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+.userinfo .info .lginfo img {
+  margin-top: 0.2rem;
+  width: 5rem;
+  height: 1.4rem;
+  margin-left: 0;
+}
+
 .myorder {
   background: #fff;
   margin: 0;
   border-radius: 0.28571429rem;
   box-shadow: 0 0.28571429rem 0.42857143rem 0 #DEE2E5;
   box-sizing: border-box;
-  position: absolute;
   width: 95%;
+  position: absolute;
   top: 11rem;
   left: 0.5rem;
 }
@@ -234,4 +277,25 @@ body {
   color: black;
   font-size: 20px;
   font-weight: 100;
+}
+
+.setupitem {
+  box-sizing: border-box;
+  width: 95%;
+  height: 4rem;
+  margin: auto;
+  margin-bottom: 0.57142857rem;
+  margin-top: 0.57142857rem;
+  background: #ffffff;
+  border-radius: 0.28571429rem;
+  padding: 0 1.14285714rem;
+}
+
+.setupitem .itemleft {
+  display: inline-block;
+  width: 50%;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 4rem;
+  border-radius: 10px;
 }

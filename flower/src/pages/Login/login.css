@@ -33,9 +33,6 @@
 }
 
 .header .navlist {
-  position: absolute;
-  top: 6%;
-  right: 0.57142857rem;
   z-index: 9;
   background: #fff;
   border: 1px solid #E9ECF0;
@@ -61,7 +58,7 @@
 }
 
 .header .top100 {
-  top: 100% !important;
+  display: none !important;
 }
 
 .lglogo {
@@ -94,14 +91,10 @@
 }
 
 .login .ckcode {
-  position: relative;
   margin-top: 0.8rem;
 }
 
 .login .ckcode .getcode {
-  position: absolute;
-  right: 0;
-  top: 38%;
   padding: 0.28571429rem 0.57142857rem;
   color: #71797f;
   font-size: 0.92857143rem;
@@ -153,6 +146,7 @@
 .login .quicklg .qclg {
   display: flex;
   height: 1.71428571rem;
+  padding-bottom: 6.5rem;
 }
 
 .login .quicklg .qclg .qclgitem {
