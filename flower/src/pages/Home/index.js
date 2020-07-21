@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import { Carousel } from 'antd'
 import Foot from '../../component/footer/index'
 import Banner from './banner'
-import http, { require } from '../../utils/http'
+// import http, { require } from '../../utils/http'
 import {
   BarsOutlined,
   CustomerServiceOutlined,
@@ -12,22 +12,21 @@ import './home.scss'
 
 class Home extends Component {
   async componentDidMount() {
-    
-    const datas = fetch('http://10.3.141.34:3000/home').then((res) =>
-      res.json(),
+    const datas = await fetch('http://10.3.141.34:3000/home').then((response) =>
+      response.json(),
     )
-    // const datas = await http.get('/home')
-    // console.log('datas=', datas)
-
-    console.log(datas)
-    // this.setState({
-    //   datas: datas,
-    // })
+    // console.log(datas.result[0].banner.images)
+    this.setState({
+      data: {
+        ...datas.result[0],
+        // img:datas.banner
+      },
+    })
+    // console.log('313123',this.state.data);
   }
 
   state = {
-    // datas: [],
-
+    data: [],
     nav_list: [
       {
         href: '',
@@ -125,7 +124,9 @@ class Home extends Component {
     ],
   }
   render() {
-    const { nav_list, scene_list, scene_list2, more_2 } = this.state
+    const { nav_list, scene_list, scene_list2, more_2, data } = this.state
+    const { nav } = this.state.data
+    // const { navigation } = nav
     return (
       <div className="home">
         {/* {<!--HeaderBar-->} */}
