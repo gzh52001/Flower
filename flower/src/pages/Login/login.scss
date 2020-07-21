@@ -1,0 +1,204 @@
+.header {
+    display: flex;
+    height: 3rem;
+    line-height: 3.1rem;
+    background: #fff;
+    font-family: SourceHanSansCN, -apple-system, Verdana, Arial, Helvetica, sans-serif;
+
+    .hleft {
+        flex: 1;
+
+        span {
+            margin-left: 1rem;
+        }
+    }
+
+    .hcenter {
+        flex: 2;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .hright {
+        flex: 1;
+
+        .hrmenu {
+            color: rgb(124, 124, 124);
+            float: right !important;
+            font-size: 1.2rem;
+            margin-right: 0.8rem;
+            margin-top: 0.8rem;
+        }
+
+    }
+
+    .navlist {
+        // position: absolute;
+        // top: 6%;
+        // right: 0.57142857rem;
+        z-index: 9;
+        background: #fff;
+        border: 1px solid #E9ECF0;
+        border-radius: 0.28571429rem;
+        display: flex;
+        flex-direction: column;
+
+        li {
+            flex: 1;
+
+            i {
+                float: left;
+                margin-left: 1rem;
+            }
+
+            p {
+                float: left;
+                padding: 0 1rem 0 0.6rem;
+                font-size: 14px;
+                color: #232628;
+            }
+        }
+    }
+
+    .top100 {
+        display: none !important;
+    }
+}
+
+.lglogo {
+    text-align: center;
+    background-color: #fff;
+    padding-top: 2.428rem;
+
+    img {
+
+        width: 13.07142857rem;
+        height: 1.71428571rem;
+    }
+}
+
+.login {
+    background-color: #fff;
+    padding: 0 1.42857143rem;
+    padding-top: 2.21428571rem;
+
+    input {
+        margin: 0.6rem 0 1rem 0;
+        height: 2rem;
+        width: 100%;
+        font-size: 1rem;
+        box-shadow: 0 0.1rem 0 0 rgb(243, 243, 243);
+    }
+
+    input::placeholder {
+        color: #cccbcb;
+    }
+
+    .ckcode {
+        // position: relative;
+        margin-top: 0.8rem;
+
+        .getcode {
+            // position: absolute;
+            // right: 0;
+            // top: 38%;
+            padding: 0.28571429rem 0.57142857rem;
+            color: #71797f;
+            font-size: 0.92857143rem;
+            text-align: center;
+        }
+    }
+
+    p {
+        font-size: 0.92857143rem;
+    }
+
+    .loginbtn {
+        margin-top: 1.92857143rem;
+        height: 3rem;
+        line-height: 3rem;
+        background: #ff734c;
+        color: #fff;
+        font-size: 1.21428571rem;
+        border-radius: 1.5rem;
+        width: 100%;
+        text-align: center;
+        border: 0.07142857rem solid #ff734c;
+        outline: none;
+        -webkit-appearance: none;
+    }
+
+    .tablgway {
+        margin: auto;
+        margin-top: 2.14285714rem;
+        color: #71797f;
+        font-size: 1.21428571rem;
+        text-align: center;
+        width: 40%;
+    }
+
+    // .tbw {
+    //     padding-bottom: 18rem;
+    // }
+
+    .quicklg {
+        margin: 5.71428571rem auto 1.42857143rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        width: 89.4%;
+
+        .qcway {
+            color: rgba(0, 0, 0, 0.2);
+            width: 10rem;
+            margin: -0.78571429rem auto 1.14285714rem;
+            background: #fff;
+            text-align: center;
+        }
+
+        .qclg {
+            display: flex;
+            height: 1.71428571rem;
+            padding-bottom: 6.5rem;
+
+            .qclgitem {
+                flex: 1;
+                height: 100%;
+                line-height: 1.71428571rem;
+                text-align: center;
+
+                .qcicon {
+                    color: #1CACEA;
+                    font-size: 1.71428571rem;
+                    vertical-align: middle;
+                }
+
+                span {
+                    margin-left: 0.57142857rem;
+                    font-size: 0.92857143rem;
+                }
+            }
+        }
+    }
+}
+
+.errtip {
+    background-color: rgb(66, 66, 66);
+    color: #ff734c;
+    border-radius: 10px;
+    margin: auto;
+    width: 70%;
+    height: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.ant-alert-message {
+
+    color: white;
+}
+
+.ant-alert-icon {
+    display: none;
+}

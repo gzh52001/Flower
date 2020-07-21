@@ -1,44 +1,28 @@
 import React from 'react';
-import { Route, Redirect, Switch } from 'react-router-dom'
+import { Route, Redirect, Switch, withRouter } from 'react-router-dom'
 import './base/base.css'
+import './base/foot.scss'
 import Mine from './pages/Mine/index'
+import Login from './pages/Login/'
 import Home from './pages/Home/index'
+import Reg from './pages/Login/reg'
 import List from './pages/List/index'
 import Cart from './pages/Cart/index'
 
-function App() {
-  const menu = [
-    {
-      text: '首页',
-      path: '/home'
-    },
-    {
-      text: '分类',
-      path: '/list'
-    },
-    {
-      text: '购物车',
-      path: '/cart'
-    },
-    {
-      text: '我的',
-      path: '/mine'
-    },
-  ];
-  // const goto = (path) => {
-  //   props.history.push(path);
-  // }
+function App(props) {
   return (
     <div >
       <Switch>
+        <Route path='/mine' component={Mine} props={props} />
+        <Route path='/login' component={Login} />
+        <Route path='/reg' component={Reg} />
         <Route path='/home' component={Home} />
-        <Route path='/list' component={List} />
         <Route path='/cart' component={Cart} />
-        <Route path='/mine' component={Mine} />
+        <Route path='/list' component={List} />
         <Redirect from='/' to='/home' exact />
       </Switch>
     </div>
   );
 }
-
+App = withRouter(App);
 export default App;
