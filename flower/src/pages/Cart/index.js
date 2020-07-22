@@ -5,11 +5,41 @@ import './cart.scss'
 import http from '../../utils/http.js'
 import Foot from '../../component/footer/'
 import store from '../../store/index'
+import { connect } from 'react-redux';
+import {change,remove} from '../../store/actions/cart'
+
+const mapStateToProps = state => {
+    return {
+        cartlist: state.cart.cartlist,
+        totalPrice: state.cart.cartlist.reduce((prev, item) => prev + item.goods_price * item.goods_qty, 0)
+    }
+}
+const mapDispatchToProps = dispatch => {
+    return {
+        removeItem(id) {
+            dispatch(remove(id))
+        },
+        change(id, qty) {
+            dispatch(change(id, qty))
+        },
+        changeQtyAsync(goods_id, goods_qty) {
+            dispatch({
+                type: 'CHANGE_QTY_ASYNC',
+                payload: { goods_id, goods_qty }
+            })
+        }
+    }
+}
+
+
+@connect(mapStateToProps,mapDispatchToProps)
 class Cart extends Component {
     constructor() {
         super();
         this.state = {
-            spcart: [],
+            spcart: {
+                cartlist: []
+            },
             youlike: []
         }
 
@@ -20,9 +50,9 @@ class Cart extends Component {
         let data = store.getState()
         this.setState({
             youlike: datas.result[0].and,
-            spcart: data.cart.cartlist
+            spcart: data.cart
         })
-        // console.log(datas)
+        console.log(this.state.spcart.cartlist.length)
     }
 
     numchange = () => {
@@ -34,14 +64,15 @@ class Cart extends Component {
         // const { cartlist } = spcart.cart
         // console.log('this.state=', spcart);
         return (
+            // <div>11</div>
             <div>
                 <Myhead />
-                {spcart.length ?
+                {spcart.cartlist.length ?
                     <ul className="cartlist">{
-                        spcart.map(item => {
+                        spcart.cartlist.map(item => {
                             return (
 
-                                <li className="cartitem">
+                                <li key={item.goods_image} className="cartitem">
                                     <input type="checkbox" className="ckbox" />
                                     <div className="goodsinfo">
                                         <img src={item.goods_image} alt="" />
@@ -99,7 +130,7 @@ class Cart extends Component {
                 </div>
                 <div className="cartfoot">
                     <span className="footleft">
-                        合计<em>￥123</em>
+                        合计<em>￥{spcart.totalPrice}</em>
                     </span>
                     <button className="footright">去结算</button>
                 </div>
