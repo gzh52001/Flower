@@ -4,12 +4,13 @@ import Mine from './mine'
 import Setting from './setting'
 
 class Category extends React.Component {
+ 
+        
+
+
     render() {
         const { match } = this.props;
         const { path } = match;
-
-
-    render() {
         return (
             <div>
                 <Route path={path + "/mine"} component={Mine} />
@@ -18,7 +19,6 @@ class Category extends React.Component {
             </div>
         )
     }
-}
 }
 
 export default Category;
