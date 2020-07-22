@@ -8,6 +8,8 @@ class Category extends React.Component {
         const { match } = this.props;
         const { path } = match;
 
+
+    render() {
         return (
             <div>
                 <Route path={path + "/mine"} component={Mine} />
@@ -17,6 +19,6 @@ class Category extends React.Component {
         )
     }
 }
-
+}
 
 export default Category;

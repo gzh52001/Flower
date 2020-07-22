@@ -11,7 +11,7 @@ import Cart from './pages/Cart/index'
 
 function App(props) {
   return (
-    <div >
+    <div>
       <Switch>
         <Route path='/mine' component={Mine} props={props} />
         <Route path='/login' component={Login} />
@@ -22,7 +22,7 @@ function App(props) {
         <Redirect from='/' to='/home' exact />
       </Switch>
     </div>
-  );
+  )
 }
 App = withRouter(App);
 export default App;

@@ -6,13 +6,19 @@ import App from './App';
 import { HashRouter, BrowserRouter } from 'react-router-dom'
 
 
-const Router = process.env.NODE_ENV === 'production' ? BrowserRouter : HashRouter;
+const Router =
+  process.env.NODE_ENV === 'production' ? BrowserRouter : HashRouter
+// ReactDOM.render(
+//   <Router>
+//     <React.StrictMode> 严格模式
+//       <App />
+//     </React.StrictMode>
+//   </Router>,
+//   document.getElementById('root')
+// );
 ReactDOM.render(
   <Router>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+    <App />
   </Router>,
-  document.getElementById('root')
-);
-
+  document.getElementById('root'),
+)
