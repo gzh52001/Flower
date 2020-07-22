@@ -10,15 +10,46 @@ import {
 } from '@ant-design/icons'
 import './home.scss'
 
+
+// constructor() {
+//   super();
+//   this.state = {
+//       spcart: [],
+//       youlike: []
+//   }
+// }
+// async componentDidMount() {
+//   const datas = await http.get('/cart/youlike');
+//   let data = store.getState()
+//   this.setState({
+//       youlike: datas.result[0].and,
+//       spcart: data.cart.cartlist
+//   })
+//   const { spcart, youlike } = this.state
+//   // console.log(datas)
+// }
+
+
+
 class Home extends Component {
+//   constructor() {
+//   this.state = {
+//       data: [],
+//       banner: [],
+//       nav:[],
+//       select:[],
+//       occasion:[]
+
+//   }
+// }
   async componentDidMount() {
     // const datas = await fetch('http://10.3.141.34:3000/home').then((response) =>
     //   response.json(),
     // )
     const datas = await http.get('/home', {})
-    let data2 = datas.result[0]
+    let data = datas.result[0]
     this.setState({
-      data: data2,
+      data: datas.result[0]
     })
 
   }
@@ -122,7 +153,7 @@ class Home extends Component {
     ],
   }
   render() {
-    const { nav_list, scene_list, scene_list2, more_2, data } = this.state
+    const { nav_list, scene_list, scene_list2, more_2, data,banner,nav,select,occasion} = this.state
     console.log(data);
     return (
       <div className="home">
