@@ -77,8 +77,8 @@ export default function VerticalTabs() {
         <Tab label="礼篮" {...a11yProps(5)} />
         <Tab label="绿植花卉" {...a11yProps(6)} />
       </Tabs>
-      <TabPanel value={value} index={0}>
-      <i id="hot" name="hot" className="catebox-details-mode active">
+      <TabPanel value={value} index={0} wrapper="span">
+      <div id="hot" name="hot" className="catebox-details-mode active">
                             <header className="catebox-details-banner">
                                 <a className="navigation" href="https://m.hua.com/xingjiabixianhua/">
                                     <img src="https://img02.hua.com/m/category/Classification/hot.png" alt=""/>
@@ -161,7 +161,7 @@ export default function VerticalTabs() {
                                                 </div>
                                     </nav>
                                 </div>
-                    </i>
+                    </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two
