@@ -15,7 +15,7 @@ class Home extends Component {
     const datas = await fetch('http://10.3.141.34:3000/home').then((response) =>
       response.json(),
     )
-    // console.log(datas.result[0].banner.images)
+    console.log(datas.result[0].banner.images)
     this.setState({
       data: {
         ...datas.result[0],
