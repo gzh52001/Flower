@@ -353,7 +353,7 @@ img {
         }
 
         .product-item-info-name {
-          padding-top: 1.28571429rem;
+          padding-top: 0.58571429rem;
           font-weight: 300;
           z-index: 9999;
           font-size: 14px;
@@ -404,7 +404,7 @@ img {
         position: absolute;
         left: 1.42857143rem;
         right: 1.42857143rem;
-        bottom: 1.14285714rem;
+        bottom: 0.24285714rem;
         z-index: 1;
 
         .product-item-info-bottom-left {
@@ -445,10 +445,10 @@ img {
     }
 
     .anticon svg {
-      margin-top: 10px;
+      margin-top: 15px;
       color: #71797f;
       font-size: 25px;
-      margin: 6px;
+      // margin: 6px;
     }
   }
 
@@ -536,7 +536,7 @@ img {
           position: absolute;
           left: 0.57142857rem;
           right: 0.57142857rem;
-          bottom: 2.64285714rem;
+          // bottom: 2.64285714rem;
           z-index: 1;
           display: flex;
           align-items: center;

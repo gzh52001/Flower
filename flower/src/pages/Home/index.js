@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import { Carousel } from 'antd'
 import Foot from '../../component/footer/index'
 import Banner from './banner'
-// import http, { require } from '../../utils/http'
+import http, { require } from '../../utils/http'
 import {
   BarsOutlined,
   CustomerServiceOutlined,
@@ -12,21 +12,19 @@ import './home.scss'
 
 class Home extends Component {
   async componentDidMount() {
-    const datas = await fetch('http://10.3.141.34:3000/home').then((response) =>
-      response.json(),
-    )
-    console.log(datas.result[0].banner.images)
+    // const datas = await fetch('http://10.3.141.34:3000/home').then((response) =>
+    //   response.json(),
+    // )
+    const datas = await http.get('/home', {})
+    let data2 = datas.result[0]
     this.setState({
-      data: {
-        ...datas.result[0],
-        // img:datas.banner
-      },
+      data: data2,
     })
-    // console.log('313123',this.state.data);
+
   }
 
   state = {
-    data: [],
+   
     nav_list: [
       {
         href: '',
@@ -125,8 +123,7 @@ class Home extends Component {
   }
   render() {
     const { nav_list, scene_list, scene_list2, more_2, data } = this.state
-    const { nav } = this.state.data
-    // const { navigation } = nav
+    console.log(data);
     return (
       <div className="home">
         {/* {<!--HeaderBar-->} */}
@@ -185,8 +182,8 @@ class Home extends Component {
             {scene_list.map((item, index) => {
               return (
                 <div key={index + 1} className="scene-item scene-item-radius">
-                  <a href={item.href} className="navigation">
-                    <img src={item.img} alt={item.alt} />
+                  <a href="" className="navigation">
+                    <img src={item.img} alt=" " />
                     <span className="scene-item-use-title">{item.title}</span>
                   </a>
                 </div>

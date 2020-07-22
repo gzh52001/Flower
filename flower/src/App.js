@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Redirect, Switch, withRouter } from 'react-router-dom'
+import '../node_modules/antd/dist/antd.css'
 import './base/base.css'
 import './base/foot.scss'
 import Mine from './pages/Mine/index'
