@@ -161,10 +161,13 @@
 }
 
 .cartlist .cartitem .goodsinfo .info .num input {
-  background-color: #E9ECF0;
   width: 1.5rem;
   margin: 0;
   text-align: center;
+}
+
+.cartlist .cartitem .goodsinfo .info .num .del {
+  margin-left: 4rem;
 }
 
 .cartlist .cartitem .goodsinfo .info .price {

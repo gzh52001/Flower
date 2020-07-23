@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Myhead from '../Mine/myhead';
 import { withLogin } from '../../utils/hoc'
+import { DeleteOutlined } from '@ant-design/icons'
 import './cart.scss'
 import http from '../../utils/http.js'
-import Foot from '../../component/footer/'
-import store from '../../store/index'
+import { InputNumber } from 'antd';
 import { connect } from 'react-redux';
-import {change,remove} from '../../store/actions/cart'
+import { remove } from '../../store/actions/cart'
 
 const mapStateToProps = state => {
     return {
@@ -16,74 +16,87 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
     return {
-        removeItem(id) {
-            dispatch(remove(id))
+        removeItem(goods_id) {
+            dispatch(remove(goods_id))
         },
-        change(id, qty) {
-            dispatch(change(id, qty))
-        },
-        changeQtyAsync(goods_id, goods_qty) {
+        changeQty(goods_id, goods_qty) {
             dispatch({
-                type: 'CHANGE_QTY_ASYNC',
-                payload: { goods_id, goods_qty }
+                type: 'CHANGE_QTY',
+                goods_id,
+                goods_qty
             })
         }
     }
 }
 
 
-@connect(mapStateToProps,mapDispatchToProps)
+@connect(mapStateToProps, mapDispatchToProps)
+
+
 class Cart extends Component {
     constructor() {
         super();
         this.state = {
-            spcart: {
-                cartlist: []
-            },
-            youlike: []
+            youlike: [],
+            cartlist2: []
         }
 
     }
 
     async componentDidMount() {
         const datas = await http.get('/cart/youlike');
-        let data = store.getState()
+        let arr = []
+        for (let i = 0; i < this.props.cartlist.length; i++) {
+            // obj1 = Object.assign(this.props.cartlist[i], this.props.cartlist[i + 1])
+            arr.push(Object.assign(this.props.cartlist[i], { ckbox: false }))
+        }
         this.setState({
             youlike: datas.result[0].and,
-            spcart: data.cart
+            cartlist2: arr
         })
-        console.log(this.state.spcart.cartlist.length)
+        console.log(this.state.cartlist2)
+        // console.log('this.props=', this.props)
+        // console.log('this.state=', this.state)
+
+
+
     }
 
-    numchange = () => {
-        console.log(123)
+    gohome = () => {
+        this.props.history.push('/home')
     }
+
+    ckboxchang = (idx) => {
+        this.setState({
+            cartlist2: this.state.cartlist2.map((item, index) => index === idx ? { ...item, ckbox: !this.state.cartlist2[idx].ckbox } : item)
+        })
+    }
+
 
     render() {
-        const { spcart, youlike } = this.state
-        // const { cartlist } = spcart.cart
-        // console.log('this.state=', spcart);
+        const { youlike, cartlist2 } = this.state
+        const { removeItem, changeQty, totalPrice, cartlist } = this.props;
+        // console.log(cartlist2)
         return (
             // <div>11</div>
             <div>
                 <Myhead />
-                {spcart.cartlist.length ?
+                {cartlist2.length ?
                     <ul className="cartlist">{
-                        spcart.cartlist.map(item => {
+                        cartlist2.map((item, index) => {
                             return (
 
                                 <li key={item.goods_image} className="cartitem">
-                                    <input type="checkbox" className="ckbox" />
+                                    <input type="checkbox" className="ckbox" checked={item.ckbox} onChange={this.ckboxchang.bind(this, index)} />
                                     <div className="goodsinfo">
                                         <img src={item.goods_image} alt="" />
                                         <div className="info">
-                                            <p className="title">{item.goods_name}</p>
+                                            <p onClick={this.ttest} className="title">{item.goods_name}</p>
 
                                             <div className="num">
                                                 <p>数量</p>
-                                                <input type="button" value="-" />
-                                                <input type="text" value={item.goods_qty} onChange={this.numchange} className="goodsnum" />
-                                                <input type="button" value="+" />
+                                                <InputNumber size="small" style={{ width: 60, marginLeft: 8 }} min={1} max={10} value={item.goods_qty} onChange={changeQty.bind(this, item.goods_id)} />
+                                                <DeleteOutlined type="button" onClick={removeItem.bind(this, item.goods_id)} className="del" />
                                             </div>
                                             <p className="price">￥{item.goods_price}</p>
                                         </div>
@@ -99,7 +112,7 @@ class Cart extends Component {
                     <div className="emptycart">
                         <img src="https://img02.hua.com/m/Shopping/m_shopping_empty_cart.png?v2" />
                         <p className="text">购物车内暂无商品</p>
-                        <p className="gohome">去逛逛</p>
+                        <p className="gohome" onClick={this.gohome}>去逛逛</p>
                     </div>
                 }
                 <div className="guess">
@@ -130,7 +143,7 @@ class Cart extends Component {
                 </div>
                 <div className="cartfoot">
                     <span className="footleft">
-                        合计<em>￥{spcart.totalPrice}</em>
+                        合计<em>￥{totalPrice}</em>
                     </span>
                     <button className="footright">去结算</button>
                 </div>

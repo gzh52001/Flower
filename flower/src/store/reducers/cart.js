@@ -13,7 +13,7 @@ const initState = {
         goods_name: '百合',
         goods_price: '119.00',
         goods_image: 'https://img01.hua.com/uploadpic/newpic/5211002.jpg_220x240.jpg',
-        goods_qty: 2
+        goods_qty: 2 
     }],
     totalPrice: 0,
     step: 0
