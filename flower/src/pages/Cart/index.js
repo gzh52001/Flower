@@ -60,7 +60,7 @@ class Cart extends Component {
         // let jisuan = arr.filter(item => item.ckbox)                 
         this.setState({
             youlike: datas.result[0].and,
-            cartlist: this.props.cartlist
+            cartlist: data3
             // totalPrice: jisuan.reduce((prev, item) => prev + item.goods_price * item.goods_qty, 0)
         })
         // console.log('this.props=', this.props)
@@ -114,7 +114,6 @@ class Cart extends Component {
                             let num = Number(item.number)
                             let price = Number(item.price)
                             return (
-
                                 <li key={item.id} className="cartitem">
                                     <input type="checkbox" className="ckbox" checked={item.status} onChange={this.ckboxchang.bind(this, index)} />
                                     <div className="goodsinfo">
