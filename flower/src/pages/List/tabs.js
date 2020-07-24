@@ -36,12 +36,10 @@ class Demo extends Component {
     this.setState({ tabPosition })
   }
 
-
-jinqu=(id)=>{
-  // this.history.push('/detail'+id)
-  console.log();
-}
-
+  jinqu = (id) => {
+    // this.history.push('/detail'+id)
+    console.log()
+  }
 
   render() {
     const {
@@ -54,13 +52,13 @@ jinqu=(id)=>{
       basket,
       botany,
     } = this.state
-    console.log(preserved)
+
     return (
       <Tabs tabPosition={this.state.tabPosition}>
         <TabPane tab="热门推荐" key="1">
           <div id="hot" name="hot" className="catebox-details-mode active">
             <header className="catebox-details-banner">
-              <a className="navigation" >
+              <a className="navigation">
                 <img
                   src="https://img02.hua.com/m/category/Classification/hot.png"
                   alt=""
@@ -73,7 +71,7 @@ jinqu=(id)=>{
                 {hot.map((item, index) => {
                   return (
                     <div key={index + 1} className="catebox-details-item">
-                      <a  className="navigation">
+                      <a className="navigation">
                         <img
                           className="catebox-details-item-pic"
                           src={item.title}
@@ -104,7 +102,6 @@ jinqu=(id)=>{
             </header>
 
             {flower.map((item, index) => {
-              console.log(flower)
               return (
                 <div key={index + 1} className="catebox-details-body">
                   <div className="catebox-details-title">
@@ -112,7 +109,7 @@ jinqu=(id)=>{
                       {item.header}
                     </h4>
                     <div className="catebox-details-title-right">
-                      <a  className="navigation">
+                      <a className="navigation">
                         <i className="iconfont iconfont-trophy"></i>
                         {item.name}
                       </a>
@@ -122,10 +119,16 @@ jinqu=(id)=>{
                   <nav className="catebox-details-list ">
                     {item.good.map((ite, index) => {
                       return (
-                        <div onClick={this.jinqu.bind(this,ite.id)} key={index + 1} className="catebox-details-item">
+                        <div
+                          onClick={this.jinqu.bind(this, ite.id)}
+                          key={index + 1}
+                          className="catebox-details-item"
+                        >
                           <a className="navigation">
                             {ite.id >= 56 ? (
-                             <p className="catebox-details-item-desc">{ite.title}</p>
+                              <p className="catebox-details-item-desc">
+                                {ite.title}
+                              </p>
                             ) : (
                               <img
                                 className="catebox-details-item-pic"
@@ -133,7 +136,6 @@ jinqu=(id)=>{
                                 alt={ite.img}
                               />
                             )}
-
                           </a>
                         </div>
                       )
@@ -144,15 +146,14 @@ jinqu=(id)=>{
             })}
 
             {/*  */}
-        
+
             {/*  */}
-          
           </article>
         </TabPane>
         <TabPane tab="永生花" key="3">
           <article id="ppf" name="ppf" className="catebox-details-mode active">
             <header className="catebox-details-banner">
-              <a className="navigation" >
+              <a className="navigation">
                 <img
                   src="https://img02.hua.com/m/category/Classification/ppf.png?v"
                   alt=""
@@ -168,7 +169,7 @@ jinqu=(id)=>{
                       {item.header}
                     </h4>
                     <div className="catebox-details-title-right">
-                      <a  className="navigation">
+                      <a className="navigation">
                         <i className="iconfont iconfont-trophy"></i>
                         {item.name}
                       </a>
@@ -179,7 +180,7 @@ jinqu=(id)=>{
                     {item.good.map((ite, index) => {
                       return (
                         <div key={index + 1} className="catebox-details-item">
-                          <a  className="navigation">
+                          <a className="navigation">
                             <img
                               className="catebox-details-item-pic"
                               src={ite.title}
@@ -227,7 +228,7 @@ jinqu=(id)=>{
                       return (
                         <div key={index + 1} className="catebox-details-row">
                           <div className="catebox-details-item">
-                            <a  className="navigation">
+                            <a className="navigation">
                               <img
                                 className="catebox-details-item-pic"
                                 src={ite.title}
@@ -272,7 +273,7 @@ jinqu=(id)=>{
                       return (
                         <div key={index + 1} className="catebox-details-row">
                           <div className="catebox-details-item">
-                            <a  className="navigation">
+                            <a className="navigation">
                               <img
                                 className="catebox-details-item-pic"
                                 src={ite.title}
@@ -316,7 +317,7 @@ jinqu=(id)=>{
                     {item.good.map((ite, index) => {
                       return (
                         <div key={index + 1} className="catebox-details-item">
-                          <a  className="navigation">
+                          <a className="navigation">
                             <img
                               className="catebox-details-item-pic"
                               src={ite.title}
@@ -363,7 +364,7 @@ jinqu=(id)=>{
                     {item.good.map((ite, index) => {
                       return (
                         <div key={index + 1} className="catebox-details-item">
-                          <a  className="navigation">
+                          <a className="navigation">
                             <img
                               className="catebox-details-item-pic"
                               src={ite.title}
