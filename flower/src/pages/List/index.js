@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import './list.scss'
 import Foot from '../../component/footer/index'
 import { SearchOutlined } from '@ant-design/icons'
-import TabPanel from './tab'
+import Demo from './tabs'
+// import TabPanel from './tab'
 class List extends Component {
   render() {
     return (
@@ -20,7 +21,8 @@ class List extends Component {
         </div>
         {/* content */}
         <section className="catebox">
-          <TabPanel />
+          <Demo props={this.props} />
+          {/* <TabPanel /> */}
         </section>
         <Foot props={this.props} />
       </div>
