@@ -36,6 +36,13 @@ class Demo extends Component {
     this.setState({ tabPosition })
   }
 
+
+jinqu=(id)=>{
+  // this.history.push('/detail'+id)
+  console.log();
+}
+
+
   render() {
     const {
       data,
@@ -53,7 +60,7 @@ class Demo extends Component {
         <TabPane tab="热门推荐" key="1">
           <div id="hot" name="hot" className="catebox-details-mode active">
             <header className="catebox-details-banner">
-              <a className="navigation" href="">
+              <a className="navigation" >
                 <img
                   src="https://img02.hua.com/m/category/Classification/hot.png"
                   alt=""
@@ -66,7 +73,7 @@ class Demo extends Component {
                 {hot.map((item, index) => {
                   return (
                     <div key={index + 1} className="catebox-details-item">
-                      <a href="" className="navigation">
+                      <a  className="navigation">
                         <img
                           className="catebox-details-item-pic"
                           src={item.title}
@@ -101,9 +108,11 @@ class Demo extends Component {
               return (
                 <div key={index + 1} className="catebox-details-body">
                   <div className="catebox-details-title">
-                    <h4 className="catebox-details-title-left">{item.header}</h4>
+                    <h4 className="catebox-details-title-left">
+                      {item.header}
+                    </h4>
                     <div className="catebox-details-title-right">
-                      <a href="" className="navigation">
+                      <a  className="navigation">
                         <i className="iconfont iconfont-trophy"></i>
                         {item.name}
                       </a>
@@ -113,14 +122,18 @@ class Demo extends Component {
                   <nav className="catebox-details-list ">
                     {item.good.map((ite, index) => {
                       return (
-                        <div key={index + 1} className="catebox-details-item">
-                          <a href="" className="navigation">
-                            <img
-                              className="catebox-details-item-pic"
-                              src={ite.title}
-                              alt={ite.img}
-                            />
-                            <p className="catebox-details-item-desc">{ite.img}</p>
+                        <div onClick={this.jinqu.bind(this,ite.id)} key={index + 1} className="catebox-details-item">
+                          <a className="navigation">
+                            {ite.id >= 56 ? (
+                             <p className="catebox-details-item-desc">{ite.title}</p>
+                            ) : (
+                              <img
+                                className="catebox-details-item-pic"
+                                src={ite.title}
+                                alt={ite.img}
+                              />
+                            )}
+
                           </a>
                         </div>
                       )
@@ -131,111 +144,15 @@ class Demo extends Component {
             })}
 
             {/*  */}
-            <div className="catebox-details-body">
-              <div className="catebox-details-title">
-                <h4 className="catebox-details-title-left">价格</h4>
-                <div className="catebox-details-title-right"></div>
-              </div>
-
-              <nav className="catebox-details-list catebox-details-list-text">
-                <div className="catebox-details-item">
-                  <a href="/tejiaxianhua/" className="navigation">
-                    <p className="catebox-details-item-desc">特价鲜花</p>
-                  </a>
-                </div>
-                <div className="catebox-details-item">
-                  <a href="/xianhuajiage/0-150/" className="navigation">
-                    <p className="catebox-details-item-desc">150元以下</p>
-                  </a>
-                </div>
-                <div className="catebox-details-item">
-                  <a href="/xianhuajiage/150-250/" className="navigation">
-                    <p className="catebox-details-item-desc">150-200元</p>
-                  </a>
-                </div>
-                <div className="catebox-details-item">
-                  <a href="/xianhuajiage/250-350/" className="navigation">
-                    <p className="catebox-details-item-desc">250-350元</p>
-                  </a>
-                </div>
-                <div className="catebox-details-item">
-                  <a href="/xianhuajiage/350-550/" className="navigation">
-                    <p className="catebox-details-item-desc">350-550元</p>
-                  </a>
-                </div>
-                <div className="catebox-details-item">
-                  <a href="/xianhuajiage/550-800/" className="navigation">
-                    <p className="catebox-details-item-desc">550-800元</p>
-                  </a>
-                </div>
-                <div className="catebox-details-item">
-                  <a href="/xianhuajiage/800-99999/" className="navigation">
-                    <p className="catebox-details-item-desc">800元以上</p>
-                  </a>
-                </div>
-              </nav>
-            </div>
+        
             {/*  */}
-            <div className="catebox-details-body">
-              <div className="catebox-details-title">
-                <h4 className="catebox-details-title-left">枝数</h4>
-                <div className="catebox-details-title-right"></div>
-              </div>
-
-              <nav className="catebox-details-list catebox-details-list-text">
-                <div className="catebox-details-item">
-                  <a href="/jiuduomeigui/" className="navigation">
-                    <p className="catebox-details-item-desc">9枝</p>
-                  </a>
-                </div>
-                <div className="catebox-details-item">
-                  <a href="/shiyiduomeigui/" className="navigation">
-                    <p className="catebox-details-item-desc">11枝</p>
-                  </a>
-                </div>
-                <div className="catebox-details-item">
-                  <a href="/shijiuduomeigui/" className="navigation">
-                    <p className="catebox-details-item-desc">19枝</p>
-                  </a>
-                </div>
-                <div className="catebox-details-item">
-                  <a href="/ershierduomeigui/" className="navigation">
-                    <p className="catebox-details-item-desc">22枝</p>
-                  </a>
-                </div>
-                <div className="catebox-details-item">
-                  <a href="/ershijiuduomeigui/" className="navigation">
-                    <p className="catebox-details-item-desc">29枝</p>
-                  </a>
-                </div>
-                <div className="catebox-details-item">
-                  <a href="/sanshisanduomeigui/" className="navigation">
-                    <p className="catebox-details-item-desc">33枝</p>
-                  </a>
-                </div>
-                <div className="catebox-details-item">
-                  <a href="/wushiduomeigui/" className="navigation">
-                    <p className="catebox-details-item-desc">50枝</p>
-                  </a>
-                </div>
-                <div className="catebox-details-item">
-                  <a href="/liushiliuduomeigui/" className="navigation">
-                    <p className="catebox-details-item-desc">66枝</p>
-                  </a>
-                </div>
-                <div className="catebox-details-item">
-                  <a href="/jiushijiuduomeigui/" className="navigation">
-                    <p className="catebox-details-item-desc">99枝以上</p>
-                  </a>
-                </div>
-              </nav>
-            </div>
+          
           </article>
         </TabPane>
         <TabPane tab="永生花" key="3">
           <article id="ppf" name="ppf" className="catebox-details-mode active">
             <header className="catebox-details-banner">
-              <a className="navigation" href="">
+              <a className="navigation" >
                 <img
                   src="https://img02.hua.com/m/category/Classification/ppf.png?v"
                   alt=""
@@ -247,9 +164,11 @@ class Demo extends Component {
               return (
                 <div key={index + 1} className="catebox-details-body">
                   <div className="catebox-details-title">
-                    <h4 className="catebox-details-title-left">{item.header}</h4>
+                    <h4 className="catebox-details-title-left">
+                      {item.header}
+                    </h4>
                     <div className="catebox-details-title-right">
-                      <a href="" className="navigation">
+                      <a  className="navigation">
                         <i className="iconfont iconfont-trophy"></i>
                         {item.name}
                       </a>
@@ -260,13 +179,15 @@ class Demo extends Component {
                     {item.good.map((ite, index) => {
                       return (
                         <div key={index + 1} className="catebox-details-item">
-                          <a href="" className="navigation">
+                          <a  className="navigation">
                             <img
                               className="catebox-details-item-pic"
                               src={ite.title}
                               alt={ite.img}
                             />
-                            <p className="catebox-details-item-desc">{ite.img}</p>
+                            <p className="catebox-details-item-desc">
+                              {ite.img}
+                            </p>
                           </a>
                         </div>
                       )
@@ -278,7 +199,11 @@ class Demo extends Component {
           </article>
         </TabPane>
         <TabPane tab="蛋糕" key="4">
-          <article id="cake" name="cake" className="catebox-details-mode active">
+          <article
+            id="cake"
+            name="cake"
+            className="catebox-details-mode active"
+          >
             <header className="catebox-details-banner">
               <a className="navigation" href="/cake/">
                 <img
@@ -289,18 +214,20 @@ class Demo extends Component {
             </header>
             {cake.map((item, index) => {
               return (
-                <div key={index+1} className="catebox-details-body">
+                <div key={index + 1} className="catebox-details-body">
                   <div className="catebox-details-title">
-                    <h4 className="catebox-details-title-left">{item.header}</h4>
+                    <h4 className="catebox-details-title-left">
+                      {item.header}
+                    </h4>
                     <div className="catebox-details-title-right"></div>
                   </div>
 
                   <nav className="catebox-details-list catebox-details-list-square">
                     {item.good.map((ite, index) => {
                       return (
-                        <div key={index+1} className="catebox-details-row">
+                        <div key={index + 1} className="catebox-details-row">
                           <div className="catebox-details-item">
-                            <a href="" className="navigation">
+                            <a  className="navigation">
                               <img
                                 className="catebox-details-item-pic"
                                 src={ite.title}
@@ -317,7 +244,11 @@ class Demo extends Component {
           </article>
         </TabPane>
         <TabPane tab="特色礼品" key="5">
-          <article id="gift" name="gift" className="catebox-details-mode active">
+          <article
+            id="gift"
+            name="gift"
+            className="catebox-details-mode active"
+          >
             <header className="catebox-details-banner">
               <a className="navigation" href="/gifts/shoushi/">
                 <img
@@ -328,18 +259,20 @@ class Demo extends Component {
             </header>
             {present.map((item, index) => {
               return (
-                <div key={index+1} className="catebox-details-body">
+                <div key={index + 1} className="catebox-details-body">
                   <div className="catebox-details-title">
-                    <h4 className="catebox-details-title-left">{item.header}</h4>
+                    <h4 className="catebox-details-title-left">
+                      {item.header}
+                    </h4>
                     <div className="catebox-details-title-right"></div>
                   </div>
 
                   <nav className="catebox-details-list catebox-details-list-square">
                     {item.good.map((ite, index) => {
                       return (
-                        <div key={index+1} className="catebox-details-row">
+                        <div key={index + 1} className="catebox-details-row">
                           <div className="catebox-details-item">
-                            <a href="" className="navigation">
+                            <a  className="navigation">
                               <img
                                 className="catebox-details-item-pic"
                                 src={ite.title}
@@ -371,23 +304,27 @@ class Demo extends Component {
             </header>
             {basket.map((item, index) => {
               return (
-                <div key={index+1} className="catebox-details-body">
+                <div key={index + 1} className="catebox-details-body">
                   <div className="catebox-details-title">
-                    <h4 className="catebox-details-title-left">{item.header}</h4>
+                    <h4 className="catebox-details-title-left">
+                      {item.header}
+                    </h4>
                     <div className="catebox-details-title-right"></div>
                   </div>
 
                   <nav className="catebox-details-list ">
                     {item.good.map((ite, index) => {
                       return (
-                        <div key={index+1} className="catebox-details-item">
-                          <a href="" className="navigation">
+                        <div key={index + 1} className="catebox-details-item">
+                          <a  className="navigation">
                             <img
                               className="catebox-details-item-pic"
                               src={ite.title}
                               alt={ite.img}
                             />
-                            <p className="catebox-details-item-desc">{ite.img}</p>
+                            <p className="catebox-details-item-desc">
+                              {ite.img}
+                            </p>
                           </a>
                         </div>
                       )
@@ -399,7 +336,11 @@ class Demo extends Component {
           </article>
         </TabPane>
         <TabPane tab="植物花卉" key="7">
-          <article id="plant" name="plant" className="catebox-details-mode active">
+          <article
+            id="plant"
+            name="plant"
+            className="catebox-details-mode active"
+          >
             <header className="catebox-details-banner">
               <a className="navigation" href="/duorouzhiwupenzai/">
                 <img
@@ -410,23 +351,27 @@ class Demo extends Component {
             </header>
             {botany.map((item, index) => {
               return (
-                <div key={index+1} className="catebox-details-body">
+                <div key={index + 1} className="catebox-details-body">
                   <div className="catebox-details-title">
-                    <h4 className="catebox-details-title-left">{item.header}</h4>
+                    <h4 className="catebox-details-title-left">
+                      {item.header}
+                    </h4>
                     <div className="catebox-details-title-right"></div>
                   </div>
 
                   <nav className="catebox-details-list ">
                     {item.good.map((ite, index) => {
                       return (
-                        <div key={index+1} className="catebox-details-item">
-                          <a href="" className="navigation">
+                        <div key={index + 1} className="catebox-details-item">
+                          <a  className="navigation">
                             <img
                               className="catebox-details-item-pic"
                               src={ite.title}
                               alt={ite.img}
                             />
-                            <p className="catebox-details-item-desc">{ite.img}</p>
+                            <p className="catebox-details-item-desc">
+                              {ite.img}
+                            </p>
                           </a>
                         </div>
                       )

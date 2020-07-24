@@ -19,7 +19,7 @@ function App(props) {
         <Route path='/reg' component={Reg} />
         <Route path='/home' component={Home} />
         <Route path='/cart' component={Cart} />
-        <Route path='/list' component={List} />
+        <Route path='/list' component={List} props={props} />
         <Redirect from='/' to='/home' exact />
       </Switch>
     </div>

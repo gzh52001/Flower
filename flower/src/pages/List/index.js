@@ -21,7 +21,7 @@ class List extends Component {
         </div>
         {/* content */}
         <section className="catebox">
-          <Demo />
+          <Demo props={this.props} />
           {/* <TabPanel /> */}
         </section>
         <Foot props={this.props} />
