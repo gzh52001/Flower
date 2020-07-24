@@ -1,0 +1,47 @@
+{
+    "header":"猜你喜欢",
+    "and":[
+        {
+            "id": 100,
+            "img": "https://img01.hua.com/uploadpic/newpic/9012450.jpg",
+            "text1": "韩式系列/初心不负",
+            "text2": " 韩式花束系列花艺师全新打造，卡罗拉玫瑰11枝、白底粉边洋桔梗5枝、大叶尤加利10枝",
+            "price": "¥226"
+        },
+        {
+            "id": 101,
+            "img": "https://img01.hua.com/uploadpic/newpic/9012455.jpg",
+            "text1": "韩式系列/亲爱的你",
+            "text2": "粉佳人玫瑰16枝、白和粉色洋桔梗各5枝、尤加利10枝、浅紫色小菊3枝、深粉色绣球1枝",
+            "price": "¥368"
+        },
+        {
+            "id": 102,
+            "img": "https://img01.hua.com/uploadpic/newpic/9012089.jpg",
+            "text1": "爱在心头",
+            "text2": "玫瑰50枝：戴安娜粉玫瑰19枝，红玫瑰31枝",
+            "price": "¥396"
+        },
+        {
+            "id": 103,
+            "img": "https://img01.hua.com/uploadpic/newpic/9012471.jpg",
+            "text1": "你是唯一",
+            "text2": "卡罗拉红玫瑰11枝",
+            "price": "¥138"
+        },
+        {
+            "id": 104,
+            "img": "https://img01.hua.com/uploadpic/newpic/9012154.jpg",
+            "text1": "甜美公主",
+            "text2": "白玫瑰22枝，粉佳人粉玫瑰14枝，粉色桔梗5枝",
+            "price": "¥369"
+        },
+        {
+            "id": 105,
+            "img": "https://img01.hua.com/uploadpic/newpic/9012243.jpg",
+            "text1": "恋恋情深",
+            "text2": "11枝香槟玫瑰，白色多头百合2枝",
+            "price": "¥198"
+        }
+    ]
+}

@@ -1,0 +1,497 @@
+{
+    "Status": "0",
+    "ErrMsg": null,
+    "DataStatus": 200,
+    "banner": {
+        "images": [{
+                "ItemCode": "1001",
+                "img": "https://img02.hua.com/slider/18_youflower_m.jpg"
+            },
+            {
+                "ItemCode": "1002",
+                "img": "https://img02.hua.com/slider/17_xingzuo_jxz_m.jpg"
+            },
+            {
+                "ItemCode": "1003",
+                "img": "https://img02.hua.com/slider/19_birthday_banner_m.jpg"
+            },
+            {
+                "ItemCode": "1004",
+                "img": "https://img02.hua.com/slider/20_graduation_m.jpg"
+            }
+        ]
+    },
+    "nav": {
+        "navigation": [{
+                "ItemCode": "1101",
+                "title": "鲜花",
+                "img": "https://img02.hua.com/m/home/img/m_home_category_flower.png"
+            },
+            {
+                "ItemCode": "1102",
+                "title": "永生花",
+                "img": "https://img02.hua.com/m/home/img/m_home_category_ppf.png"
+            },
+            {
+                "ItemCode": "1103",
+                "title": "蛋糕",
+                "img": "https://img02.hua.com/m/home/img/m_home_category_cake.png"
+            },
+            {
+                "ItemCode": "1104",
+                "title": "礼品",
+                "img": "https://img02.hua.com/m/home/img/m_home_category_gift.png"
+            },
+            {
+                "ItemCode": "1105",
+                "title": "巧克力",
+                "img": "https://img02.hua.com/m/home/img/m_home_category_chocolate.png"
+            }
+        ]
+    },
+    "select": {
+        "person": [{
+                "ItemCode": "1201",
+                "title": "送恋人",
+                "img": "https://img02.hua.com/m/home/img/m_home_use_lover.png"
+            },
+            {
+                "ItemCode": "1202",
+                "title": "送长辈",
+                "img": "https://img02.hua.com/m/home/img/m_home_use_elder.png"
+            },
+            {
+                "ItemCode": "1203",
+                "title": "送朋友",
+                "img": "https://img02.hua.com/m/home/img/m_home_use_friends.png"
+            }
+        ]
+    },
+    "occasion": {
+        "some": [{
+                "ItemCode": "1301",
+                "title": "生日祝福",
+                "img": "https://img02.hua.com/m/home/img/m_home_use_birthday2.png"
+            },
+            {
+                "ItemCode": "1302",
+                "title": "表白求婚",
+                "img": "https://img02.hua.com/m/home/img/m_home_use_profess2.png"
+            },
+            {
+                "ItemCode": "1303",
+                "title": "开业商务",
+                "img": "https://img02.hua.com/m/home/img/m_home_use_business2.png"
+            },
+            {
+                "ItemCode": "1304",
+                "title": "周年纪念",
+                "img": "https://img02.hua.com/m/home/img/m_home_use_anniversary2.png"
+            }
+        ],
+        "two": [{
+                "ItemCode": "1305",
+                "title": "热销榜",
+                "describe": "集万千宠爱",
+                "everyone": "大家都在买",
+                "number": "热销12.6万束",
+                "img": "https://img02.hua.com/m/home/img/m_home_ranklist2.png"
+            },
+            {
+                "ItemCode": "1306",
+                "title": "特价专区",
+                "describe": "超值好货",
+                "everyone": "限时直降",
+                "nprice": "¥158",
+                "oprice": "¥186",
+                "img": "https://img02.hua.com/m/home/img/m_home_special2.png"
+            }
+        ],
+        "three": [{
+                "ItemCode": "1307",
+                "title": "新季来袭",
+                "img": "https://img02.hua.com/m/home/img/m_home_category_new3.jpg?1"
+            },
+            {
+                "ItemCode": "1308",
+                "title": "品味之选",
+                "img": "https://img02.hua.com/m/home/img/m_home_category_quality3.jpg?1"
+            },
+            {
+                "ItemCode": "1309",
+                "title": "设计师臻选",
+                "img": "https://img02.hua.com/m/home/img/m_home_category_you3.jpg?1"
+            }
+        ]
+    },
+    "love": {
+        "lover": [{
+                "ItemCode": "9010966",
+                "Price": 239,
+                "LinePrice": 315,
+                "Cpmc": "一往情深",
+                "Instro": "精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎",
+                "title": "年销售冠军",
+                "hot": "经典爆款，年销售冠军",
+                "Sales": "12.4万",
+                "img": "https://img01.hua.com/uploadpic/newpic/9010966.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "9012471",
+                "Price": 138,
+                "LinePrice": 189,
+                "Cpmc": "你是唯一",
+                "Instro": "卡罗拉红玫瑰11枝",
+                "title": "11枝新品",
+                "hot": "11枝新品 一心一意的爱",
+                "Sales": "711",
+                "img": "https://img01.hua.com/uploadpic/newpic/9012471.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "9012451",
+                "Price": 216,
+                "LinePrice": 298,
+                "Cpmc": "韩式系列/公主的假日",
+                "Instro": "戴安娜玫瑰11枝、白色洋桔梗5枝、大叶尤加利10枝",
+                "title": "全新韩式系列",
+                "hot": "甜美的公主，今夜你最美",
+                "Sales": "3948",
+                "img": "https://img01.hua.com/uploadpic/newpic/9012451.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "9012177",
+                "Price": 539,
+                "LinePrice": 869,
+                "Cpmc": "不变的承诺",
+                "Instro": "99枝红玫瑰",
+                "title": "经典99枝",
+                "hot": "经典99枝，鼎力推荐！",
+                "Sales": "6.5万",
+                "img": "https://img01.hua.com/uploadpic/newpic/9012177.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "9012243",
+                "Price": 198,
+                "LinePrice": 255,
+                "Cpmc": "恋恋情深",
+                "Instro": "11枝香槟玫瑰，白色多头百合2枝",
+                "hot": "经典款式 简约设计",
+                "Sales": "7.7万",
+                "img": "https://img01.hua.com/uploadpic/newpic/9012243.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "9012455",
+                "Price": 368,
+                "LinePrice": 469,
+                "Cpmc": "韩式系列/亲爱的你",
+                "Instro": "粉佳人玫瑰16枝、白和粉色洋桔梗各5枝、尤加利10枝、浅紫色小菊3枝、深粉色绣球1枝",
+                "title": "全新韩式系列",
+                "hot": "花艺师打造 韩式花束系列",
+                "Sales": "3068",
+                "img": "https://img01.hua.com/uploadpic/newpic/9012455.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "9012450",
+                "Price": 226,
+                "LinePrice": 298,
+                "Cpmc": "韩式系列/初心不负",
+                "Instro": " 韩式花束系列花艺师全新打造，卡罗拉玫瑰11枝、白底粉边洋桔梗5枝、大叶尤加利10枝",
+                "title": "全新韩式系列",
+                "hot": "花艺师打造 韩式花束系列",
+                "Sales": "7.0万",
+                "img": "https://img01.hua.com/uploadpic/newpic/9012450.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "9012154",
+                "Price": 369,
+                "LinePrice": 485,
+                "Cpmc": "甜美公主",
+                "Instro": "白玫瑰22枝，粉佳人粉玫瑰14枝，粉色桔梗5枝",
+                "hot": "甜美设计 清新典雅",
+                "Sales": "2.4万",
+                "img": "https://img01.hua.com/uploadpic/newpic/9012154.jpg_220x240.jpg"
+            }
+        ],
+        "relatives": [{
+                "ItemCode": "9012452",
+                "Price": 296,
+                "LinePrice": 398,
+                "Cpmc": "韩式系列/一路向阳",
+                "Instro": "向日葵3枝、香槟玫瑰9枝、橙色多头玫5枝、黄色腊梅5枝、大叶尤加利5枝",
+                "title": "全新韩式系列",
+                "hot": "花艺师打造 韩式花束系列",
+                "Sales": "6.4万",
+                "img": "https://img01.hua.com/uploadpic/newpic/9012452.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "9012462",
+                "Price": 286,
+                "LinePrice": 375,
+                "Cpmc": "韩式花篮/平淡岁月",
+                "Instro": "苏醒玫瑰13枝，蓝紫色绣球1枝，香槟洋桔梗5枝",
+                "title": "韩式新品",
+                "hot": "韩式花篮系列",
+                "Sales": "597",
+                "img": "https://img01.hua.com/uploadpic/newpic/9012462.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "9012461",
+                "Price": 239,
+                "LinePrice": 319,
+                "Cpmc": "韩式系列/温柔以待",
+                "Instro": "粉色康乃馨13枝，戴安娜玫瑰5枝、粉色洋桔梗5枝、浅紫紫罗兰5枝、尤加利10枝",
+                "title": "韩式系列新品",
+                "hot": "花艺师新品 韩式系列",
+                "Sales": "3765",
+                "img": "https://img01.hua.com/uploadpic/newpic/9012461.jpg_220x240.jpg"
+            },
+
+            {
+                "ItemCode": "9012204",
+                "Price": 346,
+                "LinePrice": 486,
+                "Cpmc": "幸福万年长",
+                "Instro": "红色康乃馨66枝，白边紫色多头康乃馨15枝，栀子叶2扎",
+                "title": "精品优选",
+                "hot": "温暖花束 幸福万年长",
+                "Sales": "3836",
+                "img": "https://img01.hua.com/uploadpic/newpic/9012204.jpg_220x240.jpg"
+            }, {
+                "ItemCode": "9092149",
+                "Price": 188,
+                "LinePrice": 255,
+                "Cpmc": "一缕清香",
+                "Instro": "向日葵3枝，白色洋桔梗0.5扎",
+                "hot": "清新向日葵  夏日专属",
+                "Sales": "4507",
+                "img": "https://img01.hua.com/uploadpic/newpic/9092149.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "9012189",
+                "Price": 178,
+                "LinePrice": 232,
+                "Cpmc": "恩情无限",
+                "Instro": "粉色康乃馨11枝，百合2枝",
+                "title": "人气推荐",
+                "hot": "精选花材 精心设计",
+                "Sales": "1.5万",
+                "img": "https://img01.hua.com/uploadpic/newpic/9012189.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "1073247",
+                "Price": 298,
+                "LinePrice": 398,
+                "Cpmc": "花好月圆永生花台灯",
+                "Instro": "精选进口奥斯汀永生玫瑰台灯",
+                "title": "热销单品",
+                "Sales": "1188",
+                "img": "https://img01.hua.com/uploadpic/newpic/1073247.jpg_220x240.jpg"
+            }
+
+        ],
+
+        "preserved": [{
+                "ItemCode": "1060022",
+                "Price": 489,
+                "LinePrice": 688,
+                "Cpmc": "斜口瓶花·",
+                "Instro": "真空保鲜花，彩玫系列，5年不凋谢",
+                "Sales": "4869",
+                "img": "https://img01.hua.com/uploadpic/newpic/1060022.jpg_220x240.jpg"
+            }, {
+                "ItemCode": "1073033",
+                "Price": 198,
+                "LinePrice": 259,
+                "Cpmc": "一生一世",
+                "Instro": "厄瓜多尔进口永生红玫1朵，双色永生绣球·",
+                "title": "爱的承诺",
+                "Sales": "1.3万",
+                "img": "https://img01.hua.com/uploadpic/newpic/1073033.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "1073264",
+                "Price": 288,
+                "LinePrice": 398,
+                "Cpmc": "一鹿(路)有你永生花小夜灯·",
+                "Instro": "永生花礼盒",
+                "title": "创意新品",
+                "Sales": "694",
+                "img": "https://img01.hua.com/uploadpic/newpic/1073264.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "1073265",
+                "Price": 598,
+                "LinePrice": 698,
+                "Cpmc": "我如此爱你-口红款520·Dior#520口红(专柜正品)＋",
+                "Instro": "进口永生玫瑰礼盒",
+                "title": "畅销单品",
+                "Sales": "2071",
+                "img": "https://img01.hua.com/uploadpic/newpic/1073264.jpg_220x240.jpg"
+            }
+
+        ],
+        "cake": [{
+                "ItemCode": "5901084",
+                "Price": 258,
+                "LinePrice": 358,
+                "Cpmc": "环游世界蛋糕（2-4人食）",
+                "Instro": "巧克力蛋糕",
+                "Sales": "139",
+                "img": "https://img01.hua.com/uploadpic/newpic/5901084.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "5602016",
+                "Price": 228,
+                "LinePrice": 296,
+                "Cpmc": "四重奏蛋糕(约2磅)",
+                "Instro": "方形/巧克力/榴莲/慕斯蛋糕",
+                "title": "生日推荐",
+                "Sales": "3779",
+                "img": "https://img01.hua.com/uploadpic/newpic/5602016.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "5010046",
+                "Price": 179,
+                "LinePrice": 209,
+                "Cpmc": "水果盛宴",
+                "Instro": "2磅(8寸)水果蛋糕",
+                "Sales": "4127",
+                "img": "https://img01.hua.com/uploadpic/newpic/5010046.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "5222012",
+                "Price": 306,
+                "LinePrice": 306,
+                "Cpmc": "黑白巧克力慕斯(2磅)+方形蜡烛",
+                "Instro": "慕斯蛋糕",
+                "Sales": "536",
+                "img": "https://img01.hua.com/uploadpic/newpic/5222012.jpg_220x240.jpg"
+            }
+
+        ],
+        "present": [{
+                "ItemCode": "1077030",
+                "Price": 439,
+                "LinePrice": 539,
+                "Cpmc": "猫王收音机MW-PVX野性迷你便携蓝牙户外音箱/沙漠黄",
+                "Instro": "野性沙漠黄",
+                "title": "野性户外防水款",
+                "Sales": "50",
+                "img": "https://img01.hua.com/uploadpic/newpic/1077030.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "1076110",
+                "Price": 988,
+                "LinePrice": 990,
+                "Cpmc": "Dior迪奥传奇红唇口红套装B款/888",
+                "Instro": "迪奥口红三大明星色#999、#888、#976套装",
+                "title": "送化妆包或香水",
+                "Sales": "12",
+                "img": "https://img01.hua.com/uploadpic/newpic/1076110.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "1075038",
+                "Price": 198,
+                "LinePrice": 298,
+                "Cpmc": "小布袋香薰机加湿器/送薰衣草精油",
+                "Instro": "静音卧室办公室空气增湿香薰机",
+                "title": "毕业季特价",
+                "Sales": "37",
+                "img": "https://img01.hua.com/uploadpic/newpic/1075038.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "1065046",
+                "Price": 296,
+                "LinePrice": 396,
+                "Cpmc": "麋鹿水晶音乐盒/旋转蓝牙音箱",
+                "Instro": "一路（鹿）有你，水晶球蓝牙音箱音乐盒",
+                "title": "灯光蓝牙音响",
+                "Sales": "138",
+                "img": "https://img01.hua.com/uploadpic/newpic/1065046.jpg_220x240.jpg"
+            }
+
+        ],
+        "chocolate": [{
+                "ItemCode": "1201003",
+                "Price": 158,
+                "LinePrice": 358,
+                "Cpmc": "奢悦之美巧克力礼盒",
+                "Instro": "夹心巧克力",
+                "Sales": "5180",
+                "img": "https://img01.hua.com/uploadpic/newpic/1201003.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "1207010",
+                "Price": 288,
+                "LinePrice": 388,
+                "Cpmc": "巧克巧蔻定制16粒装手工夹心巧克力",
+                "Instro": "手工夹心巧克力",
+                "Sales": "4757",
+                "img": "https://img01.hua.com/uploadpic/newpic/1207010.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "1204060",
+                "Price": 318,
+                "LinePrice": 418,
+                "Cpmc": "德国进口LAUENSTEIN巧克力手工松露酒味夹心金装礼盒",
+                "Instro": "德国进口酒心黑巧克力20粒",
+                "Sales": "135",
+                "img": "https://img01.hua.com/uploadpic/newpic/1204060.jpg_220x240.jpg"
+            },
+            {
+                "ItemCode": "1207009",
+                "Price": 162,
+                "LinePrice": 262,
+                "Cpmc": "巧克巧蔻定制9粒装手工夹心巧克力",
+                "Instro": "手工夹心巧克力",
+                "title": "畅销爆款",
+                "Sales": "3173",
+                "img": "https://img01.hua.com/uploadpic/newpic/1207009.jpg_220x240.jpg"
+            }
+        ]
+    },
+    "adve": {
+        "id": 4,
+        "firm": [{
+            "ItemCode": "1401",
+            "title": "企业团购",
+            "img": "https://img02.hua.com/m/home/img/m_home_qiyetuangou.png"
+        }]
+
+    },
+    "why": {
+        "id": 5,
+        "title": "为什么选择我们",
+        "result": [{
+                "ItemCode": "1501",
+                "title": "获评鲜花龙头企业",
+                "img": "https://img02.hua.com/m/pro_detail/m_details_brand_01.png"
+            },
+            {
+                "ItemCode": "1502",
+                "title": "1~3小时送花上门",
+                "img": "https://img02.hua.com/m/pro_detail/m_details_brand_02.png"
+            },
+            {
+                "ItemCode": "1503",
+                "title": "赛事冠军花艺师团队",
+                "img": "https://img02.hua.com/m/pro_detail/m_details_brand_03.png"
+            },
+            {
+                "ItemCode": "1504",
+                "title": "严选花材",
+                "img": "https://img02.hua.com/m/pro_detail/m_details_brand_04.png"
+            },
+            {
+                "ItemCode": "1505",
+                "title": "12道严苛品控标准",
+                "img": "https://img02.hua.com/m/pro_detail/m_details_brand_05.png"
+            },
+            {
+                "ItemCode": "1506",
+                "title": "500万用户信赖好评",
+                "img": "https://img02.hua.com/m/pro_detail/m_details_brand_06.png"
+            }
+        ]
+    }
+}
