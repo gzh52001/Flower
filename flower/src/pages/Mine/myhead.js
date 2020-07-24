@@ -56,6 +56,11 @@ class Myhead extends Component {
             this.setState({
                 headname: '购物车'
             })
+        } 
+        else if (path === '/detail') {
+            this.setState({
+                headname: <img src="https://m.hua.com/content/vue/login/static/img/m_hualogo.png" alt=""/>
+            })
         }
     }
     render() {

@@ -37,8 +37,7 @@ class Demo extends Component {
   }
 
   jinqu = (id) => {
-    // this.history.push('/detail'+id)
-    console.log()
+    this.props.props.history.push('/detail?' + id, this.props)
   }
 
   render() {
@@ -70,7 +69,11 @@ class Demo extends Component {
               <nav className="catebox-details-list ">
                 {hot.map((item, index) => {
                   return (
-                    <div key={index + 1} className="catebox-details-item">
+                    <div
+                      onClick={this.jinqu.bind(this, item.id)}
+                      key={index + 1}
+                      className="catebox-details-item"
+                    >
                       <a className="navigation">
                         <img
                           className="catebox-details-item-pic"
@@ -179,7 +182,11 @@ class Demo extends Component {
                   <nav className="catebox-details-list ">
                     {item.good.map((ite, index) => {
                       return (
-                        <div key={index + 1} className="catebox-details-item">
+                        <div
+                          onClick={this.jinqu.bind(this, ite.id)}
+                          key={index + 1}
+                          className="catebox-details-item"
+                        >
                           <a className="navigation">
                             <img
                               className="catebox-details-item-pic"
@@ -226,7 +233,11 @@ class Demo extends Component {
                   <nav className="catebox-details-list catebox-details-list-square">
                     {item.good.map((ite, index) => {
                       return (
-                        <div key={index + 1} className="catebox-details-row">
+                        <div
+                          onClick={this.jinqu.bind(this, ite.id)}
+                          key={index + 1}
+                          className="catebox-details-row"
+                        >
                           <div className="catebox-details-item">
                             <a className="navigation">
                               <img
@@ -271,7 +282,11 @@ class Demo extends Component {
                   <nav className="catebox-details-list catebox-details-list-square">
                     {item.good.map((ite, index) => {
                       return (
-                        <div key={index + 1} className="catebox-details-row">
+                        <div
+                          onClick={this.jinqu.bind(this, ite.id)}
+                          key={index + 1}
+                          className="catebox-details-row"
+                        >
                           <div className="catebox-details-item">
                             <a className="navigation">
                               <img
@@ -316,7 +331,11 @@ class Demo extends Component {
                   <nav className="catebox-details-list ">
                     {item.good.map((ite, index) => {
                       return (
-                        <div key={index + 1} className="catebox-details-item">
+                        <div
+                          onClick={this.jinqu.bind(this, ite.id)}
+                          key={index + 1}
+                          className="catebox-details-item"
+                        >
                           <a className="navigation">
                             <img
                               className="catebox-details-item-pic"
@@ -363,7 +382,11 @@ class Demo extends Component {
                   <nav className="catebox-details-list ">
                     {item.good.map((ite, index) => {
                       return (
-                        <div key={index + 1} className="catebox-details-item">
+                        <div
+                          onClick={this.jinqu.bind(this, ite.id, this.props)}
+                          key={index + 1}
+                          className="catebox-details-item"
+                        >
                           <a className="navigation">
                             <img
                               className="catebox-details-item-pic"
