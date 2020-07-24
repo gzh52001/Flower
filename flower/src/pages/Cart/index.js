@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Myhead from '../Mine/myhead';
-import { withLogin } from '../../utils/hoc'
+// import { withLogin } from '../../utils/hoc'
 import { DeleteOutlined } from '@ant-design/icons'
 import './cart.scss'
 import http from '../../utils/http.js'
@@ -115,7 +115,7 @@ class Cart extends Component {
                             let price = Number(item.price)
                             return (
 
-                                <li key={item.title} className="cartitem">
+                                <li key={item.id} className="cartitem">
                                     <input type="checkbox" className="ckbox" checked={item.status} onChange={this.ckboxchang.bind(this, index)} />
                                     <div className="goodsinfo">
                                         <img src={item.img} alt="" />
