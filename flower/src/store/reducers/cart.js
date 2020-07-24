@@ -1,26 +1,15 @@
-import { ADD_TO_CART, CLEAR_CART, REMOVE_FROM_CART, CHANGE_QTY } from '../actions/cart'
-
+import { ADD_TO_CART, CLEAR_CART, REMOVE_FROM_CART, CHANGE_QTY, GET_FROM_CART } from '../actions/cart'
+import axios from 'axios'
 // 初始状态
 const initState = {
-    cartlist: [{
-        goods_id: 1,
-        goods_name: '玫瑰',
-        goods_price: '158.00',
-        goods_image: 'https://img01.hua.com/uploadpic/newpic/9012089.jpg_220x240.jpg',
-        goods_qty: 1
-    }, {
-        goods_id: 2,
-        goods_name: '百合',
-        goods_price: '119.00',
-        goods_image: 'https://img01.hua.com/uploadpic/newpic/5211002.jpg_220x240.jpg',
-        goods_qty: 2 
-    }],
+    cartlist: [],
     totalPrice: 0,
     step: 0
 }
 
 // reducer
 // 作用: 指定state的修改逻辑：创建一个新state的并返回（覆盖旧数据）
+
 function reducer(state = initState, action) {
     switch (action.type) {
 
@@ -33,18 +22,31 @@ function reducer(state = initState, action) {
             }
         // 删除商品
         case REMOVE_FROM_CART:
-            return {
-                ...state,
-                cartlist: state.cartlist.filter(item => item.goods_id != action.goods_id)
-            }
+            axios({
+                url: 'http://10.3.141.34:3000/cart/delete',
+                method: 'delete',
+                params: { id: action.id },
+            })
+                .then(response => {
+                    if (response.data.meta.status === 200) {
+                        return Object.assign({}, state, { cartlist: state.cartlist.filter(item => item.id != action.id) })
+
+                    } else {
+                        alert('删除失败')
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        // console.log(state.cartlist.filter(item => item.id != action.id))
+
 
         // 修改数量
         case CHANGE_QTY:
-
             return {
                 ...state,
                 cartlist: state.cartlist.map(item => {
-                    if (item.goods_id === action.goods_id) {
+                    if (item.id === action.id) {
                         item.goods_qty = action.goods_qty
                     }
                     return item;
@@ -57,6 +59,24 @@ function reducer(state = initState, action) {
                 ...state,
                 cartlist: []
             }
+
+        case GET_FROM_CART:
+            const newState = JSON.parse(JSON.stringify(state));
+            newState.cartlist = action.data;
+            // console.log(newState)
+            if (newState.cartlist) {
+                return {
+                    ...state,
+                    cartlist: state.cartlist.concat(newState.cartlist)
+                }
+            } else {
+                return {
+                    ...state
+                }
+            }
+
+
+
         default:
             return state;
     }
