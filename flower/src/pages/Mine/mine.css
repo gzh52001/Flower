@@ -1,0 +1,300 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  touch-action: none;
+  background: #E9ECF0;
+}
+
+.mine {
+  background: #E9ECF0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  height: 3rem;
+  line-height: 3.1rem;
+  background: #fff;
+  font-family: SourceHanSansCN, -apple-system, Verdana, Arial, Helvetica, sans-serif;
+}
+
+.header .hleft {
+  flex: 1;
+}
+
+.header .hleft span {
+  margin-left: 1rem;
+}
+
+.header .hcenter {
+  flex: 2;
+  text-align: center;
+}
+
+.header .hright {
+  flex: 1;
+}
+
+.userinfo {
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  -webkit-box-pack: center;
+  display: flex;
+  width: 100%;
+  height: 8rem;
+  font-size: 15px;
+  background: url("../../img/backgroundv3.png");
+  min-height: 9.28571429rem;
+  background-repeat: no-repeat;
+  background-size: 100% 9.42857143rem;
+  background-position: top center;
+}
+
+.userinfo .info {
+  text-align: center;
+  margin-top: -1.3rem;
+}
+
+.userinfo .info p:first-child {
+  margin-bottom: 1rem;
+}
+
+.userinfo .info .loginandreg {
+  display: block;
+  width: 8rem;
+  height: 2.47142857rem;
+  line-height: 2.57142857rem;
+  background-color: #fff;
+  border-radius: 4rem;
+  font-weight: 500;
+  margin-top: -0.5rem;
+}
+
+.userinfo .info p:first-child {
+  color: white;
+}
+
+.userinfo .info .userpic {
+  float: left;
+  width: 4.57142857rem;
+  height: 4.57142857rem;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  margin-right: 1.42857143rem;
+}
+
+.userinfo .info .userpic a {
+  height: 100%;
+}
+
+.userinfo .info .userpic a img {
+  height: 100%;
+  vertical-align: top;
+}
+
+.userinfo .info .lginfo {
+  float: left;
+  color: #fff;
+  max-width: 8.57142857rem;
+}
+
+.userinfo .info .lginfo p {
+  margin-top: 1rem;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+.userinfo .info .lginfo img {
+  margin-top: 0.2rem;
+  width: 5rem;
+  height: 1.4rem;
+  margin-left: 0;
+}
+
+.myorder {
+  background: #fff;
+  margin: 0;
+  border-radius: 0.28571429rem;
+  box-shadow: 0 0.28571429rem 0.42857143rem 0 #DEE2E5;
+  box-sizing: border-box;
+  width: 95%;
+  position: absolute;
+  top: 11rem;
+  left: 0.5rem;
+}
+
+.myorder .mohead {
+  display: flex;
+  width: 93%;
+  height: 3.14285714rem;
+  line-height: 3.14285714rem;
+  padding: 0 1rem 0rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.myorder .mohead p {
+  flex: 1;
+  text-align: right;
+  padding-right: 1rem;
+  margin: 0;
+}
+
+.myorder .mohead p:first-child {
+  text-align: left;
+}
+
+.myorder .mohead ::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1.14285714rem;
+  right: 1.14285714rem;
+  width: 88%;
+  height: 0;
+  border-bottom: 1px solid #E9ECF0;
+}
+
+.myorder .mobody {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 5rem;
+}
+
+.myorder .mobody .orderitem {
+  flex: 1;
+  max-width: 33.33333333%;
+  text-align: center;
+  padding: 0rem 0.42857143rem 0rem;
+  position: relative;
+  font-size: 0.92857143rem;
+  margin-top: 0;
+}
+
+.myorder .mobody .orderitem a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  display: block;
+}
+
+.myorder .mobody .orderitem img {
+  width: 2.28571429rem;
+  height: 2.28571429rem;
+  vertical-align: middle;
+}
+
+.myorder .mobody .orderitem p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+.myinfo {
+  background: #fff;
+  margin: 0 0.68rem 0 0.57142857rem;
+  border-radius: 0.28571429rem;
+  margin-top: 7.3rem;
+  box-shadow: 0 0.28571429rem 0.42857143rem 0 #DEE2E5;
+}
+
+.myinfo .mibody {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.myinfo .mibody .mbitem {
+  width: 25%;
+  text-align: center;
+  height: 6.42857143rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.myinfo .mibody .mbitem p {
+  margin: 0;
+}
+
+.myinfo .mibody .mbitem .txt {
+  margin-top: .5rem;
+  text-decoration: none;
+  font-size: 0.85714286rem;
+  margin-top: 0.57142857rem;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.setting {
+  background: #fff;
+  margin: 0 0.68rem 0 0.57142857rem;
+  border-radius: 0.28571429rem;
+  margin-top: .6rem;
+  box-shadow: 0 0.28571429rem 0.42857143rem 0 #DEE2E5;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.setting .mbitem {
+  color: #232628;
+  width: 25%;
+  text-align: center;
+}
+
+.setting .mbitem p {
+  margin: 0;
+}
+
+.setting .mbitem .txt {
+  margin-top: .5rem;
+  text-decoration: none;
+  font-size: 0.85714286rem;
+  margin-top: 0.57142857rem;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.antdicon {
+  color: black;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.setupitem {
+  box-sizing: border-box;
+  width: 95%;
+  height: 4rem;
+  margin: auto;
+  margin-bottom: 0.57142857rem;
+  margin-top: 0.57142857rem;
+  background: #ffffff;
+  border-radius: 0.28571429rem;
+  padding: 0 1.14285714rem;
+}
+
+.setupitem .itemleft {
+  display: inline-block;
+  width: 50%;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 4rem;
+  border-radius: 10px;
+}
