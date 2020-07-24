@@ -17,7 +17,6 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
     return {
-
         changeQty(id, number) {
             dispatch({
                 type: 'CHANGE_QTY',
@@ -99,7 +98,20 @@ class Cart extends Component {
         })
         // location.reload([bForceGet])
     }
+    godetail = (id) => {
+        this.props.history.push('/detail?' + id)
+    }
 
+    changeNum = (num, idx) => {
+        let jisuan = this.state.cartlist.filter(item => item.status)
+        this.setState({
+            cartlist: this.state.cartlist.map((item, index) => {
+                return idx === index ? { ...item, number: num } : item
+            }),
+            totalPrice: jisuan.reduce((prev, item) => prev + item.price * item.number, 0)
+        })
+        // console.log(event, num)
+    }
 
     render() {
         const { youlike, cartlist, totalPrice } = this.state
@@ -123,7 +135,7 @@ class Cart extends Component {
 
                                             <div className="num">
                                                 <p>数量</p>
-                                                <InputNumber size="small" style={{ width: 60, marginLeft: 8 }} min={1} max={10} value={item.number} onChange={changeQty.bind(this, item.id)} />
+                                                <InputNumber size="small" style={{ width: 60, marginLeft: 8 }} min={1} max={10} defaultValue={1} num={item.number} onChange={event => { this.changeNum(event, index) }} />
                                                 <DeleteOutlined type="button" onClick={this.removeItem.bind(this, item.id)} className="del" />
                                                 {/* {console.log('itemid=', item.price)} */}
                                             </div>
@@ -151,7 +163,7 @@ class Cart extends Component {
                                 // console.log(item)
                                 return (
                                     <div key={item.img} className="listitem">
-                                        <a href="">
+                                        <a onClick={this.godetail.bind(this, item.id)}>
                                             <div className="imgbox">
                                                 <img src={item.img} />
                                             </div>
