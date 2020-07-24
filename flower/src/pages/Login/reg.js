@@ -159,7 +159,6 @@ class reg extends Component {
             username: e.target.value
         })
     }
-
     render() {
         const { history } = this.props
         const { emailerr, pswerr, psw2, psw, username } = this.state

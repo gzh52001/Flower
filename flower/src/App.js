@@ -18,11 +18,11 @@ function App(props) {
       <Switch>
         <Route path='/mine' component={Mine} props={props} />
         <Route path='/login' component={Login} />
-        <Route path='/reg' component={Reg} />
+        <Route path='/reg' component={Reg} props={props} />
         <Route path='/home' component={Home} />
         <Route path='/cart' component={Cart} />
-        <Route path='/list' component={List} props={props}/>
-        <Route path='/detail' component={Detail}/>
+        <Route path='/list' component={List} props={props} />
+        <Route path='/detail' component={Detail} />
         <Route path='/cart' component={Cart} props={props} />
         <Redirect from='/' to='/home' exact />
       </Switch>

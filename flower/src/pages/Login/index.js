@@ -30,7 +30,7 @@ class Login extends Component {
         })
     }
     goreg = () => {
-        this.props.history.push('/reg', { props: this.props })
+        this.props.history.push('/reg')
     }
 
     //绑定数据
