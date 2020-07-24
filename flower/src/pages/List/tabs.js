@@ -37,7 +37,7 @@ class Demo extends Component {
   }
 
   jinqu = (id) => {
-    this.props.props.history.push('/detail?' + id, this.props)
+    this.props.props.history.push('/detail?' + id)
   }
 
   render() {
@@ -133,12 +133,12 @@ class Demo extends Component {
                                 {ite.title}
                               </p>
                             ) : (
-                              <img
-                                className="catebox-details-item-pic"
-                                src={ite.title}
-                                alt={ite.img}
-                              />
-                            )}
+                                <img
+                                  className="catebox-details-item-pic"
+                                  src={ite.title}
+                                  alt={ite.img}
+                                />
+                              )}
                           </a>
                         </div>
                       )
