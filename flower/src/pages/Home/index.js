@@ -91,7 +91,6 @@ class Home extends Component {
       present,
       chocolate,
     } = this.state
-    console.log(cake)
     return (
       <div className="home">
         {/* {<!--HeaderBar-->} */}
@@ -264,7 +263,7 @@ class Home extends Component {
             })}
           </div>
           <div className="product-more">
-            <a href="" className="product-more-btn">
+            <a href="http://localhost:3000/#/list" className="product-more-btn">
               查看更多
             </a>
           </div>
@@ -321,7 +320,7 @@ class Home extends Component {
             })}
           </div>
           <div className="product-more">
-            <a href="" className="product-more-btn">
+            <a href="http://localhost:3000/#/list" className="product-more-btn">
               查看更多
             </a>
           </div>
@@ -375,7 +374,7 @@ class Home extends Component {
             </div>
           </div>
           <div className="product-more">
-            <a href="" className="product-more-btn">
+            <a href="http://localhost:3000/#/list" className="product-more-btn">
               查看更多
             </a>
           </div>
@@ -429,7 +428,7 @@ class Home extends Component {
             </div>
           </div>
           <div className="product-more">
-            <a href="" className="product-more-btn">
+            <a href="http://localhost:3000/#/list" className="product-more-btn">
               查看更多
             </a>
           </div>
@@ -537,7 +536,7 @@ class Home extends Component {
             </div>
           </div>
           <div className="product-more">
-            <a href="" className="product-more-btn">
+            <a href="http://localhost:3000/#/list" className="product-more-btn">
               查看更多
             </a>
           </div>
