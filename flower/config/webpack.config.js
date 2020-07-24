@@ -417,6 +417,12 @@ module.exports = function (webpackEnv) {
                       },
                     },
                   ],
+                  [
+                    "@babel/plugin-proposal-decorators",
+                    {
+                      "legacy": true
+                    }
+                  ]
                 ],
                 // This is a feature of `babel-loader` for webpack (not Babel itself).
                 // It enables caching results in ./node_modules/.cache/babel-loader/

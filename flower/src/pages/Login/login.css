@@ -33,6 +33,9 @@
 }
 
 .header .navlist {
+  position: absolute;
+  top: 6%;
+  right: 0.57142857rem;
   z-index: 9;
   background: #fff;
   border: 1px solid #E9ECF0;

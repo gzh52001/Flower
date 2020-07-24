@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 // import 'amfe-flexible'
-
+import store from './store'
 import { HashRouter, BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux';
 
 
 const Router =
@@ -17,8 +18,11 @@ const Router =
 //   document.getElementById('root')
 // );
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
-  document.getElementById('root'),
-)
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>,
+  document.getElementById('root')
+);
+

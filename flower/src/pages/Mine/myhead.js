@@ -52,6 +52,10 @@ class Myhead extends Component {
             this.setState({
                 headname: '注册'
             })
+        } else if (path === '/cart') {
+            this.setState({
+                headname: '购物车'
+            })
         }
     }
     render() {
