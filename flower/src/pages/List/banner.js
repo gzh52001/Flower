@@ -58,7 +58,6 @@ class Banner extends Component {
               {/* https://img02.hua.com/slider/19_birthday_banner_m.jpg */}
               {/* https://img02.hua.com/slider/18_youflower_m.jpg */}
               <img
-                style={'height:451px'}
                 src={` https://img01.hua.com/uploadpic/${val}.jpg`}
                 alt=""
                 style={{ width: '100%', verticalAlign: 'top' }}
