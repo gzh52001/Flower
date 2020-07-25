@@ -56,12 +56,21 @@ class Cart extends Component {
         //     arr.push(Object.assign(this.props.cartlist[i], { ckbox: true }))
         // }
 
-        // let jisuan = arr.filter(item => item.ckbox)                 
-        this.setState({
-            youlike: datas.result[0].and,
-            cartlist: data3
-            // totalPrice: jisuan.reduce((prev, item) => prev + item.goods_price * item.goods_qty, 0)
-        })
+        // let jisuan = arr.filter(item => item.ckbox)      
+        if (data3) {
+            this.setState({
+                youlike: datas.result[0].and,
+                cartlist: data3
+                // totalPrice: jisuan.reduce((prev, item) => prev + item.goods_price * item.goods_qty, 0)
+            })
+        } else {
+            this.setState({
+                youlike: datas.result[0].and,
+                cartlist: []
+                // totalPrice: jisuan.reduce((prev, item) => prev + item.goods_price * item.goods_qty, 0)
+            })
+        }
+
         // console.log('this.props=', this.props)
         // console.log('this.state=', this.state)
     }
